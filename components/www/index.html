@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stencil Components</title>
+  <script src="/build/app.js"></script>
+</head>
+<body>
+  <hab-app></hab-app>
+  <style>
+    body {
+      padding: 16px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script>
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      // auto-unregister service worker during dev mode
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.unregister().then(function() { location.reload(true) });
+      });
+    }
+  </script>
+
+</body>
+</html>

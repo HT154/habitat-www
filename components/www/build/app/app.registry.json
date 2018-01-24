@@ -1,0 +1,15 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "core": "app.core.js",
+  "corePolyfilled": "es5-build-disabled.js",
+  "components": {
+    "hab-app": {
+      "$": "hab-app"
+    },
+    "hab-test": {
+      "$": "hab-test"
+    }
+  }
+}

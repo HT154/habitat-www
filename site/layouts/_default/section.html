@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <main>
+    <!--
+      <h1>{{ with .Site.GetPage "section" "posts" }}{{ .Title }}{{ end }}</h1>
+    -->
+    {{ range .Paginator.Pages }}
+      <h2>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      <h3>
+        {{ dateFormat "January 2, 2006" .Date }}
+      </h3>
+      <p>
+        {{ .Description }}
+      </p>
+      {{ partial "categories" . }}
+    {{ end }}
+  </main>
+{{ end }}
+
+{{ define "title" }}
+  {{ title .Section }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "rss" }}
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+{{ end }}

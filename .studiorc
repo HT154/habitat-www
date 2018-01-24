@@ -1,0 +1,46 @@
+packages=(
+  cnunciato/hugo
+  cnunciato/node-sass
+  core/git
+  core/curl
+  core/rsync
+  core/inotify-tools
+)
+
+for package in ${packages[@]}; do
+  hab pkg install $package
+  hab pkg binlink $package
+done
+
+clean() {
+  rm -rf components/node_modules1
+  rm -rf components/www/build
+}
+
+install() {
+  pushd /src/components
+  npm install
+  popd
+}
+
+build_dev() {
+  BASE_URL="http://localhost" cd /src && build
+}
+
+run() {
+  /src/scripts/parallel.sh \
+    "node-sass --watch --include-path /src/site/scss --output /src/site/static/css /src/site/scss/main.scss" \
+    "hugo serve --baseURL "http://localhost" --bind 0.0.0.0 --source /src/site --buildDrafts" \
+    "/src/scripts/dev-components.sh" \
+    "/src/scripts/sync-components.sh"
+}
+
+serve() {
+  source /src/results/last_build.env
+  hab sup unload core/habitat-www
+  echo "Starting: http://localhost"
+  hab sup start $pkg_ident
+}
+
+clean
+build_dev

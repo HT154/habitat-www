@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+App.loadComponents(function(e,t,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function e(){}return e.prototype.render=function(){return t("div",null,t("p",null,"Hey, I'm a web asfsadasksdhfksjdhf! Do I load?"))},Object.defineProperty(e,"is",{get:function(){return"hab-test"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"style",{get:function(){return""},enumerable:!0,configurable:!0}),e}();e.HabTest=r},"hab-test");

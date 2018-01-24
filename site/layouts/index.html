@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Habitat</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/app.js"></script>
+  </head>
+  <body>
+    <div class="page home">
+      <nav>
+        <header>
+          {{ partial "header"}} <cdn-test></cdn-test>
+          <hab-test></hab-test>
+        </header>
+      </nav>
+      <main>
+        <img src="/media/images/habicat.svg">
+        <h1>Habitat. It's awesome.</h1>
+        <p>Here's why you should agree.</p>
+      </main>
+      <footer>
+        {{ partial "footer"}}
+      </footer>
+    </div>
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-XXXXXXXX-X','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>

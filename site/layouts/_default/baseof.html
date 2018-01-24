@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {{ block "title" . }}
+        {{ .Site.Title }}
+      {{ end }}
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/app.js"></script>
+    {{ block "rss" . }}
+    {{ end }}
+  </head>
+  <body>
+    <div class="page home">
+      <nav>
+        <header>
+          {{ partial "header"}}
+        </header>
+      </nav>
+      {{ block "main" . }}
+        <main></main>
+      {{ end }}
+      <footer>
+        {{ partial "footer"}}
+      </footer>
+    </div>
+    <script src="/js/main.js"></script>
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-33874507-2','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>

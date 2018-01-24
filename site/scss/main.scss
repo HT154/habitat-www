@@ -1,0 +1,94 @@
+$default-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$default-font-color: #444;
+$default-font-size: 16px;
+$default-line-height: 22px;
+$default-margin: 16px;
+$default-padding: 16px;
+$default-radius: 4px;
+
+$heading-font-family: "Helvetica Neue", Helvetica, sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: $heading-font-family;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #5691B8;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  color: $default-font-color;
+  margin: 0;
+  padding: 0;
+
+  main {
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: $default-line-height;
+    padding: $default-padding;
+  }
+}
+
+header {
+  padding: $default-padding;
+  margin-bottom: $default-margin;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eee;
+  opacity: 1;
+}
+
+.page {
+
+  &.home {
+
+    img {
+      width: 100%;
+      border-radius: 4px;
+      border: $default-padding solid #fafafa;
+      box-shadow: 0px 2px 6px #999;
+    }
+  }
+}
+
+.tags {
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      padding: $default-padding / 2 $default-padding $default-padding / 2 $default-padding !important;
+      border-radius: $default-radius;
+      background-color: blue;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+    }
+  }
+}
+
+.categories {
+  @extend .tags;
+
+  li {
+    a {
+      background-color: red;
+    }
+  }
+}

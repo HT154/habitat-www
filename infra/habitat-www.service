@@ -1,0 +1,8 @@
+[Unit]
+Description=Habitat Supervisor
+
+[Service]
+ExecStart=/bin/hab sup start core/habitat-www --channel stable --strategy at-once
+
+[Install]
+WantedBy=default.target

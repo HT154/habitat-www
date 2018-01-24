@@ -1,0 +1,14 @@
+# Use this file to templatize your application's native configuration files.
+# See the docs at https://www.habitat.sh/docs/developing-packages#add-configuration.
+# You can safely delete this file if you don't need it.
+
+base_url = "http://localhost"
+worker_processes = 1
+
+[events]
+worker_connections = 512
+
+[http.server]
+listen = 80
+root = "/hab/svc/habitat-www/static"
+index = "index.html"

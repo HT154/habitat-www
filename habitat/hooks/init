@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Copy everything in public into the service's "static" path
+cp -Rv {{ pkg.path }}/public/* {{ pkg.svc_static_path }}/
+
+# Apply permissions allowing Nginx workers (which run as user "hab") to read
+# what's in the static path
+chown -R hab:hab "{{ pkg.svc_static_path }}"
