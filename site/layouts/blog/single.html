@@ -1,0 +1,20 @@
+{{ define "main" }}
+  {{ .Content }}
+
+  {{ if .Params.author }}
+    {{ $author := index .Site.Data.authors .Params.author }}
+    <p>
+      {{ $author.name }}
+      {{ $author.bio }}
+      @{{ $author.twitter }}
+    </p>
+  {{ end }}
+{{ end }}
+
+{{ define "aside" }}
+
+{{ end }}
+
+{{ define "title" }}
+
+{{ end }}
