@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <main>
+    <h1>{{ .Title }}</h1>asdfsaf
+    {{ .Content }}
+  </main>
+{{ end }}
+
+{{ define "aside" }}
+  <ul>
+    <li>Habitat Announcement Webcast</li>
+    <li>Overview</li>
+    <li>What is a Modern Application?</li>
+    <li>Why Package the App and Its Automation Together?</li>
+    <li>Habitat and the Modern Application</li>
+    <li>Habitat and Workload Placement</li>
+  </ul>
+{{ end }}
+
+{{ define "title" }}
+  About | {{ .Site.Title }}
+{{ end }}
