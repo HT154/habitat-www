@@ -5,34 +5,13 @@
  */
 
 
-import {
-  App as HabApp
-} from './components/hab-app/hab-app';
-
 declare global {
-  interface HTMLHabAppElement extends HabApp, HTMLElement {
-  }
-  var HTMLHabAppElement: {
-    prototype: HTMLHabAppElement;
-    new (): HTMLHabAppElement;
-  };
-  interface HTMLElementTagNameMap {
-    "hab-app": HTMLHabAppElement;
-  }
-  interface ElementTagNameMap {
-    "hab-app": HTMLHabAppElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "hab-app": JSXElements.HabAppAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface HabAppAttributes extends HTMLAttributes {
-      
-    }
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
   }
 }
+
 
 
 import {
@@ -40,7 +19,7 @@ import {
 } from './components/hab-test/hab-test';
 
 declare global {
-  interface HTMLHabTestElement extends HabTest, HTMLElement {
+  interface HTMLHabTestElement extends HabTest, HTMLStencilElement {
   }
   var HTMLHabTestElement: {
     prototype: HTMLHabTestElement;
@@ -64,3 +43,4 @@ declare global {
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }

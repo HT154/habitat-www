@@ -1,3 +1,7 @@
+dist/
+!www/favicon.ico
+www/
+
 *~
 *.sw[mnpcod]
 *.log
@@ -9,15 +13,13 @@ log.txt
 *.sublime-workspace
 
 .idea/
+.vscode/
 .sass-cache/
 .versions/
 node_modules/
+$RECYCLE.BIN/
 
-**/dist/
-**/www/build/
-
-# submodule packages
-/compiler
-/server
-/sys
-/testing
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+.env

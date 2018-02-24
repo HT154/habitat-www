@@ -1,8 +1,9 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
-  bundles: [
-    { components: ['hab-test'] }
-  ],
-  collections: []
+  plugins: [
+    sass()
+  ]
 };
 
 exports.devServer = {

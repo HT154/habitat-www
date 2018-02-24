@@ -9,9 +9,7 @@ export class AppProfile {
   render() {
     return (
       <div>
-        <p>
-         Hey, look at me I'm a web component! Yay!
-        </p>
+        <p>Hey, look at me I'm a web component! Yay!</p>
       </div>
     );
   }

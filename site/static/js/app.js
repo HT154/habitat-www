@@ -1,7 +1,7 @@
 /*! Built with http://stenciljs.com */
-(function(win, doc, appNamespace, urlNamespace, publicPath, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components) {
+(function(win, doc, appNamespace, urlNamespace, publicPath, discoverPublicPath, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components) {
 
-function init(win, doc, appNamespace, urlNamespace, publicPath, appCore, appCorePolyfilled, hydratedCssClass, components, x, y) {
+function init(win, doc, docScripts, appNamespace, urlNamespace, publicPath, discoverPublicPath, appCore, appCorePolyfilled, hydratedCssClass, components, x, y) {
     // create global namespace if it doesn't already exist
     (win[appNamespace] = win[appNamespace] || {}).components = components;
     y = components.filter(function (c) { return c[2]; }).map(function (c) { return c[0]; });
@@ -10,25 +10,30 @@ function init(win, doc, appNamespace, urlNamespace, publicPath, appCore, appCore
         // reusing the "x" and "i" variables from the args for funzies
         x = doc.createElement('style');
         x.innerHTML = y.join() + '{visibility:hidden}.' + hydratedCssClass + '{visibility:inherit}';
-        x.setAttribute('data-visibility', '');
+        x.setAttribute('data-styles', '');
         doc.head.insertBefore(x, doc.head.firstChild);
     }
     // get this current script
     // script tag cannot use "async" attribute
-    x = doc.scripts[doc.scripts.length - 1];
-    if (x && x.src) {
-        y = x.src.split('/').slice(0, -1);
-        publicPath = (y.join('/')) + (y.length ? '/' : '') + urlNamespace + '/';
+    if (discoverPublicPath) {
+        x = docScripts[docScripts.length - 1];
+        if (x && x.src) {
+            y = x.src.split('/').slice(0, -1);
+            publicPath = (y.join('/')) + (y.length ? '/' : '') + urlNamespace + '/';
+        }
     }
     // request the core this browser needs
     // test for native support of custom elements and fetch
     // if either of those are not supported, then use the core w/ polyfills
     // also check if the page was build with ssr or not
     x = doc.createElement('script');
-    x.src = publicPath + ((supportsCustomElements(win) && supportsEsModules(x) && supportsFetch(win) && supportsCssVariables(win)) ? appCore : appCorePolyfilled);
+    x.src = publicPath + ((!urlContainsFlag(win) && supportsCustomElements(win) && supportsEsModules(x) && supportsFetch(win) && supportsCssVariables(win)) ? appCore : appCorePolyfilled);
     x.setAttribute('data-path', publicPath);
     x.setAttribute('data-namespace', urlNamespace);
     doc.head.appendChild(x);
+}
+function urlContainsFlag(win) {
+    return win.location.search.indexOf('core=es5') > -1;
 }
 function supportsEsModules(scriptElm) {
     // detect static ES module support
@@ -56,6 +61,6 @@ function supportsCssVariables(win) {
 }
 
 
-init(win, doc, appNamespace, urlNamespace, publicPath, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components);
+init(win, doc, doc.scripts, appNamespace, urlNamespace, publicPath, discoverPublicPath, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components);
 
-})(window, document, "App","app","/build/app/","app.core.js","es5-build-disabled.js","hydrated",[["hab-app","hab-app",1],["hab-test","hab-test",1]]);
+})(window, document, "App","app","/build/app/",true,"app.core.js","es5-build-disabled.js","hydrated",[["hab-test","hab-test",1]]);
