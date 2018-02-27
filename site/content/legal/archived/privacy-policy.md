@@ -1,8 +1,7 @@
 ---
-title: Chef Privacy Policy
-date: 2018-02-15
-draft: false
-has_archived: true
+title: "Privacy Policy"
+date: 2018-02-27T22:44:42Z
+draft: true
 ---
 
 This privacy policy ("Policy") explains how Personal Information is collected, used, and disclosed by Chef Software Inc. ("Chef, "we" or "us") with respect to use by website users, training and event registrants/participants, newsletter/information recipients, promotion participants, online community participants, those making product or purchase inquiries and others (collectively referred to as "You" or "Customers" or "Users") of any Web sites operated by Chef that link to this Policy, including without limitation Chef.io, inspec.io and habitat.sh (collectively the "Sites") and any Services or products provided to you by Chef (the "Services"). It also describes your choices regarding use, access and correction of your personal information.
@@ -25,8 +24,11 @@ With respect to personal data received or transferred pursuant to the Privacy Sh
 
 If you have an unresolved privacy or data use concern that we have not addressed satisfactorily, please contact our U.S.-based third party dispute resolution provider (free of charge) at [https://feedback-form.truste.com/watchdog/request](https://feedback-form.truste.com/watchdog/request).
 
-
 Under certain conditions, more fully described on the [Privacy Shield website](https://www.privacyshield.gov/), you may invoke binding arbitration when other dispute resolution procedures have been exhausted.
+
+**U.S. - Swiss Safe Harbor Framework**
+
+Chef complies with the U.S. – Swiss Safe Harbor Framework as set forth by the U.S. Department of Commerce regarding the collection, use and retention of personal data from Switzerland. Chef has certified that it adheres to the Safe Harbor Privacy Principles of notice, choice, onward transfer, security, data integrity, access, and enforcement. To learn more about the Safe Harbor program, and to view Chef’s certification, please visit http://www.export.gov/safeharbor.
 
 **WHAT IS PERSONAL INFORMATION?**
 
@@ -57,17 +59,16 @@ In general, we use Personal Information to process your requests or transactions
 * To respond to your emails, submissions, comments, requests or complaints;
 * To request feedback and to enable us to develop, customize and improve the Sites and our products and Services;
 * To analyze data and trends and to personalize and improve Site content and features and your experience on the Site, such as providing content or features to match your profile and interests;
-* To contact you about our or our third party's services, products, activities, special events or offers, and for other internal marketing, informational, product development and promotional purposes;
-* To present our Sites and its contents to you;
-* To provide you with information, products or Services that you request from us;
-* To fulfill any other purpose for which you provide it;
-* To provide you with notices about your account or subscription, including expiration and renewal notices;
-* To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection;
-* To notify you about changes to our Sites or any products or Services we offer or provide though it;
-* To allow you to participate in interactive features on our Sites;
-in any other way we may describe when you provide the information.
-
-Personal Information provided online may be linked together or merged with other Personal Information so that we may better understand your needs and inform you about our products or Services and those of our partners. In addition, if we receive information from third parties with whom we have business relationships, we may combine this information with the other Personal Information we maintain about you.
+* To contact you about our or our third party's services, products, activities, special events or offers, and for other internal marketing, informational, product development and promotional purposes
+* To present our Sites and its contents to you
+* To provide you with information, products or Services that you request from us
+* To fulfill any other purpose for which you provide it
+* To provide you with notices about your account or subscription, including expiration and renewal notices
+* To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection
+* To notify you about changes to our Sites or any products or Services we offer or provide though it
+* To allow you to participate in interactive features on our Sites.
+* In any other way we may describe when you provide the information
+* Personal Information provided online may be linked together or merged with other Personal Information so that we may better understand your needs and inform you about our products or Services and those of our partners. In addition, if we receive information from third parties with whom we have business relationships, we may combine this information with the other Personal Information we maintain about you.
 
 Chef may store and process Personal Information in the United States and other countries.
 
@@ -88,13 +89,13 @@ For example, we may disclose Personal Information that we collect or you provide
 * To third parties we have engaged as partners to facilitate the sale of our Services
 * To a buyer or other successor in the event of a merger, divestiture, restructuring, reorganization, dissolution or other sale or transfer of some or all of Chef’s assets, whether as a going concern or as part of bankruptcy, liquidation or similar proceeding, in which Personal Information held by Chef about our Sites users is among the assets transferred
 * To fulfill the purpose for which you provide it
-* fFr any other purpose disclosed by us when you provide the information
+* For any other purpose disclosed by us when you provide the information
 * With your consent
 
 We may also disclose your Personal Information:
 
 * To comply with any court order, law or legal process, including to respond to any government or regulatory request.
-* To enforce or apply our terms of use, terms of sale, trademark policy and other agreements, including for billing and collection purposes.
+* To enforce or apply our [terms of use](/legal/terms-and-conditions/), [terms of sale](https://www.chef.io/online-master-agreement/), [trademark policy](/legal/trademark-policy/) and other agreements, including for billing and collection purposes.
 * If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of Chef, our customers or others.
 
 **WHAT STEPS DO WE TAKE TO PROTECT YOUR INFORMATION ONLINE?**
@@ -113,7 +114,7 @@ Our web site may contain links to other web sites. Any Personal Information you 
 
 **HOW CAN YOU CORRECT AND UPDATE YOUR PERSONAL INFORMATION OR OBTAIN ADDITIONAL INFORMATION**
 
-If you wish to verify, correct, update or delete any Personal Information we have collected, you may do so by emailing privacy@chef.io. Requests to access, change, or delete your information will be handled within 30 days. Questions regarding this Policy or the information practices of the Company's Web sites should be directed to Chef Privacy by [clicking here](https://www.chef.io/support/) or by mailing Chef, Attn: Legal Department, 619 Western Avenue, Suite 400, Seattle, WA 98104.
+If you wish to verify, correct, update or delete any Personal Information we have collected, you may do so by emailing support@chef.io. Requests to access, change, or delete your information will be handled within 30 days. Questions regarding this Policy or the information practices of the Company's Web sites should be directed to Chef Privacy by clicking here or by mailing Chef Software, Attn: Legal Department, 619 Western Avenue, Suite 400, Seattle, WA 98104.
 
 **CHILDREN UNDER THE AGE OF 13**
 
@@ -129,9 +130,4 @@ It is our policy to post any changes we make to our privacy policy on this page.
 
 **CONTACT INFORMATION**
 
-To ask questions or comment about this privacy policy and our privacy practices, contact us at:
-
-legal@chef.io<br>
-Chef Software Inc.<br>
-619 Western Avenue, Suite 400<br>
-Seattle, WA 98104.
+To ask questions or comment about this privacy policy and our privacy practices, contact us at: legal@chef.io.
