@@ -36,7 +36,7 @@ creating a new blog post:
 
 ```
 cd site
-hugo new posts/my-new-post-title.md
+hugo new blog/my-sweet-new-post.md
 ```
 
 Your new post will be created as a draft with enough frontmatter to get you going. All content is authored
