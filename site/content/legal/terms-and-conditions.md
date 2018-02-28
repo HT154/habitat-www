@@ -2,6 +2,7 @@
 title: Terms and Conditions of Use
 draft: false
 date: 2017-10-09
+has_archived: true
 ---
 
 ## Date of Last Revision: October 9, 2017
