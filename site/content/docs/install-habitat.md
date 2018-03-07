@@ -66,7 +66,7 @@ Setup asks you to create a new origin and a set of origin keys. Optionally, you 
 
 > For more information about using Habitat Builder, see the section on [Working with Builder]({{< relref "/docs/using-builder.md" >}}).
 
-During setup, you may elect to provide anonymous usage data of the `hab` CLI. This information is used by the Habitat team to improve the CLI experience. For information on the types of data we gather and how we intend to use it, see [Analytics in Habitat]({{< relref "docs/about-analytics.md" >}}).
+During setup, you may elect to provide anonymous usage data of the `hab` CLI. This information is used by the Habitat team to improve the CLI experience. For information on the types of data we gather and how we intend to use it, see [Analytics in Habitat]({{< relref "/docs/about-analytics.md" >}}).
 
 ## Download and Install FAQ
 
