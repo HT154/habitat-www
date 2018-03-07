@@ -1056,10 +1056,10 @@ For an example of using Docker Compose to run multiple Habitat containers togeth
 
 1. Connect to that machine (e.g., over `ssh`).
 
-1. Create the required user and group &mdash; for example, on an Ubuntu server:
+1. Create the required user and group &mdash; for example:
 
     ```
-    $ sudo groupadd hab
+    $ sudo adduser --group hab
     $ sudo useradd -g hab hab
     ```
 

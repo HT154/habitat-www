@@ -211,4 +211,4 @@ To connect a Plan, view one of your origins (while signed in), click on the **Co
 
 ### Builder Demo
 
-For a guided walkthrough of this process, try the [Build System demo]({{< relref "/demo/build-system/steps/1.md" >}}).
+For a guided walkthrough of this process, try the [Build System demo]({{< relref "/learn/demo/build-system/steps/1.md" >}}).
