@@ -1,25 +1,28 @@
-const { spawn, spawnSync } = require('child_process');
+const { spawnSync } = require('child_process');
 
-function runCommand(command, sub) {
-  const p = spawnSync(command, ['--help'], { shell: true });
-  let parsed;
+function getHelp(command, sub) {
+  const proc = runCommand(command, ['--help']);
 
   function render(data) {
-    parsed = parse(command, data.replace(/`/g, ''));
+    parsed = parseOutput(command, data.replace(/`/g, ''));
     console.log(markdownForCommand(parsed, sub));
-    console.log(markdownForSubcommands(parsed.subcommand_items));
+    console.log(markdownForSubcommands(parsed.subcommands));
+
+    parsed.subcommands.forEach(item => {
+      getHelp(`${item.parent} ${item.command}`, item.parent !== 'hab');
+    });
   }
 
-  render(p.stderr.toString() || p.stdout.toString());
-
-  parsed.subcommand_items.forEach(item => {
-    runCommand(`${item.parent} ${item.command}`, item.parent !== 'hab');
-  });
+  render(proc.stderr.toString() || proc.stdout.toString());
 }
 
-function parse(command, out) {
-  const lines = out.split('\n');
-  const sections = out.split('\n\n');
+function runCommand(command, args) {
+  return spawnSync(command, args, { shell: true });
+}
+
+function parseOutput(command, output) {
+  const lines = output.split('\n');
+  const sections = output.split('\n\n');
 
   let result = {
     name: lines[0].trim(),
@@ -34,18 +37,18 @@ function parse(command, out) {
       .trim()
       .replace(/(\n[ ]{5,})[\w]/gm, '$2')
       .split('\n')
-      .map(line => line.trim());
+      .map(line => line.trim().replace(/^--/, '    --'));
   });
 
   return {
     command: command,
     name: result.name,
     description: result.description,
-    usage: result.USAGE || [],
-    flags: result.FLAGS || [],
+    aliases: result.ALIASES || [],
     args: result.ARGS || [],
-    subcommands: result.SUBCOMMANDS || [],
-    subcommand_items: (result.SUBCOMMANDS || [])
+    flags: result.FLAGS || [],
+    subcommands_body: result.SUBCOMMANDS || [],
+    subcommands: (result.SUBCOMMANDS || [])
       .filter(line => !line.match(/help/))
       .map(line => {
         const matched = line.match(/^(\w+) (.+)$/);
@@ -55,8 +58,12 @@ function parse(command, out) {
           description: matched ? matched[2].trim() : ''
         };
     }),
-    aliases: result.ALIASES || []
+    usage: result.USAGE || [],
   };
+}
+
+function os() {
+  return require('os');
 }
 
 function anchor(str) {
@@ -73,7 +80,9 @@ draft: false
 
 The commands for the Habitat CLI (\`hab\`) are listed below.
 
-Version: ${spawnSync('hab', ['--version'], { shell: true }).stdout.toString()}
+* Version: ${runCommand('hab', ['--version']).stdout.toString()}
+* Platform: ${os().platform}
+* Generated: ${new Date().toString()}
 
 `;
 }
@@ -81,37 +90,18 @@ Version: ${spawnSync('hab', ['--version'], { shell: true }).stdout.toString()}
 function markdownForCommand(parsed, sub) {
   return `##${sub ? '#' : ''} ${parsed.command}
 
-${parsed.description}
+${subsection('Description', parsed.description)}
 
-**USAGE**
+${subsection('Usage', parsed.usage.join('\n').replace(/^hab-/, 'hab ').replace(/hab butterfly/, 'hab'))}
 
-\`\`\`
-${parsed.usage.join('\n').replace(/^hab-/, 'hab ').replace(/hab butterfly/, 'hab')}
-\`\`\`
+${subsection('Flags', parsed.flags.join('\n'))}
 
-**FLAGS**
+${subsection('Subcommands', parsed.subcommands_body.join('\n'))}
 
-\`\`\`
-${parsed.flags.join('\n') || 'None.'}
-\`\`\`
+${subsection('Args', parsed.args.join('\n'))}
 
-**SUBCOMMANDS**
+${subsection('Aliases', parsed.aliases.join('\n'))}
 
-\`\`\`
-${parsed.subcommands.join('\n') || 'None.'}
-\`\`\`
-
-**ARGS**
-
-\`\`\`
-${parsed.args.join('\n') || 'None.'}
-\`\`\`
-
-**ALIASES**
-
-\`\`\`
-${parsed.aliases.join('\n') || 'None.'}
-\`\`\`
 [&uarr; Top](#)`;
 }
 
@@ -122,5 +112,18 @@ ${subcommands.map(item => `* [${item.command}](#${anchor(`${item.parent} ${item.
 `;
 }
 
+function subsection(title, data) {
+  if (data) {
+    return `**${title.toUpperCase()}**
+
+\`\`\`
+${data}
+\`\`\`
+`
+  }
+
+  return '';
+}
+
 console.log(markdownForHeader());
-runCommand('hab');
+getHelp('hab');
