@@ -42,5 +42,9 @@ serve() {
   hab sup start $pkg_ident
 }
 
+generate_cli_docs() {
+  node scripts/generate-cli-docs
+}
+
 clean
 build_dev
