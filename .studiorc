@@ -43,7 +43,7 @@ serve() {
 }
 
 generate_cli_docs() {
-  node scripts/generate-cli-docs
+  node scripts/generate-cli-docs.js > site/content/docs/habitat-cli.md
 }
 
 clean

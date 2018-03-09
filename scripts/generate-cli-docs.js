@@ -1,4 +1,5 @@
 const { spawnSync } = require('child_process');
+const { platform } = require('os');
 
 function getHelp(command, sub) {
   const proc = runCommand(command, ['--help']);
@@ -6,7 +7,6 @@ function getHelp(command, sub) {
   function render(data) {
     parsed = parseOutput(command, data.replace(/`/g, ''));
     console.log(markdownForCommand(parsed, sub));
-    console.log(markdownForSubcommands(parsed.subcommands));
 
     parsed.subcommands.forEach(item => {
       getHelp(`${item.parent} ${item.command}`, item.parent !== 'hab');
@@ -62,15 +62,14 @@ function parseOutput(command, output) {
   };
 }
 
-function os() {
-  return require('os');
-}
-
 function anchor(str) {
   return str.replace(/ /g, '-');
 }
 
 function markdownForHeader() {
+  const now = new Date();
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const formatted = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`
   return `---
 title: Habitat CLI
 draft: false
@@ -80,39 +79,39 @@ draft: false
 
 The commands for the Habitat CLI (\`hab\`) are listed below.
 
-* Version: ${runCommand('hab', ['--version']).stdout.toString()}
-* Platform: ${os().platform}
-* Generated: ${new Date().toString()}
-
+| Applies to Version | Last Updated |
+| ------- | ------------ |
+| ${runCommand('hab', ['--version']).stdout.toString().trim()} (${platform()}) | ${formatted} |
 `;
 }
 
 function markdownForCommand(parsed, sub) {
   return `##${sub ? '#' : ''} ${parsed.command}
 
-${subsection('Description', parsed.description)}
+${parsed.description}
 
-${subsection('Usage', parsed.usage.join('\n').replace(/^hab-/, 'hab ').replace(/hab butterfly/, 'hab'))}
-
-${subsection('Flags', parsed.flags.join('\n'))}
-
-${subsection('Subcommands', parsed.subcommands_body.join('\n'))}
-
-${subsection('Args', parsed.args.join('\n'))}
-
-${subsection('Aliases', parsed.aliases.join('\n'))}
-
-[&uarr; Top](#)`;
-}
-
-function markdownForSubcommands(subcommands) {
-  return `
-${subcommands.map(item => `* [${item.command}](#${anchor(`${item.parent} ${item.command}`)}): ${item.description}`).join('\n')
-}
+${markdownForSubsection('Usage', parsed.usage.join('\n').replace(/^hab-/, 'hab ').replace(/hab butterfly/, 'hab').trim())}
+${markdownForSubsection('Flags', parsed.flags.join('\n').trim())}
+${markdownForSubsection('Args', parsed.args.join('\n').trim())}
+${markdownForSubsection('Aliases', parsed.aliases.join('\n'.trim()))}
+${markdownForSubcommands(parsed.subcommands)}
+---
 `;
 }
 
-function subsection(title, data) {
+function markdownForSubcommands(subcommands) {
+  if (!subcommands.length) {
+    return '';
+  }
+
+  return `**SUBCOMMANDS**
+
+| Command | Description |
+| ------- | ----------- |
+${subcommands.map(item => `| [${item.parent} ${item.command}](#${anchor(`${item.parent} ${item.command}`)}) | ${item.description} |`).join('\n')}`;
+}
+
+function markdownForSubsection(title, data) {
   if (data) {
     return `**${title.toUpperCase()}**
 
@@ -123,6 +122,11 @@ ${data}
   }
 
   return '';
+}
+
+if (platform() !== 'linux') {
+  console.error('This script is intended to run only on Linux-based platforms.');
+  process.exit(1);
 }
 
 console.log(markdownForHeader());

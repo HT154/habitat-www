@@ -7,11 +7,9 @@ draft: false
 
 The commands for the Habitat CLI (`hab`) are listed below.
 
-* Version: hab 0.53.0/20180205213018
-
-* Platform: linux
-* Generated: Fri Mar 09 2018 17:15:53 GMT+0000 (UTC)
-
+| Applies to Version | Last Updated |
+| ------- | ------------ |
+| hab 0.54.0/20180221022026 (linux) | 9 Mar 2018 |
 
 ## hab
 
@@ -23,7 +21,6 @@ The commands for the Habitat CLI (`hab`) are listed below.
 hab [SUBCOMMAND]
 ```
 
-
 **FLAGS**
 
 ```
@@ -32,70 +29,39 @@ hab [SUBCOMMAND]
 ```
 
 
-**SUBCOMMANDS**
-
-```
-bldr      Commands relating to Habitat Builder
-cli       Commands relating to Habitat runtime config
-config    Commands relating to Habitat runtime config
-file      Commands relating to Habitat files
-help      Prints this message or the help of the given subcommand(s)
-origin    Commands relating to Habitat origin keys
-pkg       Commands relating to Habitat packages
-plan      Commands relating to plans and other app-specific configuration.
-ring      Commands relating to Habitat rings
-studio    Commands relating to Habitat Studios
-sup       Commands relating to the Habitat Supervisor
-svc       Commands relating to Habitat services
-user      Commands relating to Habitat users
-```
-
-
-
-
 **ALIASES**
 
 ```
-apply      Alias for: 'config apply'
-install    Alias for: 'pkg install'
-run        Alias for: 'sup run'
-setup      Alias for: 'cli setup'
-start      Alias for: 'svc start'
-stop       Alias for: 'svc stop'
-term       Alias for: 'sup term'
+apply      Alias for: 'config apply'install    Alias for: 'pkg install'run        Alias for: 'sup run'setup      Alias for: 'cli setup'start      Alias for: 'svc start'stop       Alias for: 'svc stop'term       Alias for: 'sup term'
 ```
 
+**SUBCOMMANDS**
 
-[&uarr; Top](#)
-
-* [bldr](#hab-bldr): Commands relating to Habitat Builder
-* [cli](#hab-cli): Commands relating to Habitat runtime config
-* [config](#hab-config): Commands relating to Habitat runtime config
-* [file](#hab-file): Commands relating to Habitat files
-* [origin](#hab-origin): Commands relating to Habitat origin keys
-* [pkg](#hab-pkg): Commands relating to Habitat packages
-* [plan](#hab-plan): Commands relating to plans and other app-specific configuration.
-* [ring](#hab-ring): Commands relating to Habitat rings
-* [studio](#hab-studio): Commands relating to Habitat Studios
-* [sup](#hab-sup): Commands relating to the Habitat Supervisor
-* [svc](#hab-svc): Commands relating to Habitat services
-* [user](#hab-user): Commands relating to Habitat users
+| Command | Description |
+| ------- | ----------- |
+| [hab bldr](#hab-bldr) | Commands relating to Habitat Builder |
+| [hab cli](#hab-cli) | Commands relating to Habitat runtime config |
+| [hab config](#hab-config) | Commands relating to Habitat runtime config |
+| [hab file](#hab-file) | Commands relating to Habitat files |
+| [hab origin](#hab-origin) | Commands relating to Habitat origin keys |
+| [hab pkg](#hab-pkg) | Commands relating to Habitat packages |
+| [hab plan](#hab-plan) | Commands relating to plans and other app-specific configuration. |
+| [hab ring](#hab-ring) | Commands relating to Habitat rings |
+| [hab studio](#hab-studio) | Commands relating to Habitat Studios |
+| [hab sup](#hab-sup) | Commands relating to the Habitat Supervisor |
+| [hab svc](#hab-svc) | Commands relating to Habitat services |
+| [hab user](#hab-user) | Commands relating to Habitat users |
+---
 
 ## hab bldr
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat Builder
-```
-
 
 **USAGE**
 
 ```
 hab bldr [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -104,34 +70,19 @@ hab bldr [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-channel    Commands relating to Habitat Builder channels
-encrypt    Reads a stdin stream containing plain text and outputs an encrypted representation
-help       Prints this message or the help of the given subcommand(s)
-job        Commands relating to Habitat Builder jobs
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [channel](#hab-bldr-channel): Commands relating to Habitat Builder channels
-* [encrypt](#hab-bldr-encrypt): Reads a stdin stream containing plain text and outputs an encrypted representation
-* [job](#hab-bldr-job): Commands relating to Habitat Builder jobs
+| Command | Description |
+| ------- | ----------- |
+| [hab bldr channel](#hab-bldr-channel) | Commands relating to Habitat Builder channels |
+| [hab bldr encrypt](#hab-bldr-encrypt) | Reads a stdin stream containing plain text and outputs an encrypted representation |
+| [hab bldr job](#hab-bldr-job) | Commands relating to Habitat Builder jobs |
+---
 
 ### hab bldr channel
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat Builder channels
-```
-
 
 **USAGE**
 
@@ -139,7 +90,6 @@ Commands relating to Habitat Builder channels
 hab bldr channel [SUBCOMMAND]
 ```
 
-
 **FLAGS**
 
 ```
@@ -148,34 +98,19 @@ hab bldr channel [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-create     Creates a new channel
-destroy    Destroys a channel
-help       Prints this message or the help of the given subcommand(s)
-list       Lists origin channels
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [create](#hab-bldr-channel-create): Creates a new channel
-* [destroy](#hab-bldr-channel-destroy): Destroys a channel
-* [list](#hab-bldr-channel-list): Lists origin channels
+| Command | Description |
+| ------- | ----------- |
+| [hab bldr channel create](#hab-bldr-channel-create) | Creates a new channel |
+| [hab bldr channel destroy](#hab-bldr-channel-destroy) | Destroys a channel |
+| [hab bldr channel list](#hab-bldr-channel-list) | Lists origin channels |
+---
 
 ### hab bldr channel create
 
-**DESCRIPTION**
-
-```
 Creates a new channel
-```
-
 
 **USAGE**
 
@@ -183,16 +118,12 @@ Creates a new channel
 hab bldr channel create [OPTIONS] <CHANNEL>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -202,19 +133,11 @@ hab bldr channel create [OPTIONS] <CHANNEL>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr channel destroy
 
-**DESCRIPTION**
-
-```
 Destroys a channel
-```
-
 
 **USAGE**
 
@@ -222,16 +145,12 @@ Destroys a channel
 hab bldr channel destroy [OPTIONS] <CHANNEL>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -241,19 +160,11 @@ hab bldr channel destroy [OPTIONS] <CHANNEL>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr channel list
 
-**DESCRIPTION**
-
-```
 Lists origin channels
-```
-
 
 **USAGE**
 
@@ -261,16 +172,12 @@ Lists origin channels
 hab bldr channel list [OPTIONS] [ORIGIN]
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -280,19 +187,11 @@ hab bldr channel list [OPTIONS] [ORIGIN]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr encrypt
 
-**DESCRIPTION**
-
-```
 Reads a stdin stream containing plain text and outputs an encrypted representation
-```
-
 
 **USAGE**
 
@@ -300,7 +199,6 @@ Reads a stdin stream containing plain text and outputs an encrypted representati
 hab bldr encrypt [OPTIONS]
 ```
 
-
 **FLAGS**
 
 ```
@@ -311,22 +209,11 @@ hab bldr encrypt [OPTIONS]
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr job
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat Builder jobs
-```
-
 
 **USAGE**
 
@@ -334,7 +221,6 @@ Commands relating to Habitat Builder jobs
 hab bldr job [SUBCOMMAND]
 ```
 
-
 **FLAGS**
 
 ```
@@ -343,38 +229,21 @@ hab bldr job [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-cancel     Cancel a build job group and any in-progress builds
-demote     Demote packages from a completed build job to a specified channel
-help       Prints this message or the help of the given subcommand(s)
-promote    Promote packages from a completed build job to a specified channel
-start      Schedule a build job or group of jobs
-status     Get the status of a job group
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [cancel](#hab-bldr-job-cancel): Cancel a build job group and any in-progress builds
-* [demote](#hab-bldr-job-demote): Demote packages from a completed build job to a specified channel
-* [promote](#hab-bldr-job-promote): Promote packages from a completed build job to a specified channel
-* [start](#hab-bldr-job-start): Schedule a build job or group of jobs
-* [status](#hab-bldr-job-status): Get the status of a job group
+| Command | Description |
+| ------- | ----------- |
+| [hab bldr job cancel](#hab-bldr-job-cancel) | Cancel a build job group and any in-progress builds |
+| [hab bldr job demote](#hab-bldr-job-demote) | Demote packages from a completed build job to a specified channel |
+| [hab bldr job promote](#hab-bldr-job-promote) | Promote packages from a completed build job to a specified channel |
+| [hab bldr job start](#hab-bldr-job-start) | Schedule a build job or group of jobs |
+| [hab bldr job status](#hab-bldr-job-status) | Get the status of a job group |
+---
 
 ### hab bldr job cancel
 
-**DESCRIPTION**
-
-```
 Cancel a build job group and any in-progress builds
-```
-
 
 **USAGE**
 
@@ -382,16 +251,12 @@ Cancel a build job group and any in-progress builds
 hab bldr job cancel [OPTIONS] <GROUP_ID>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -401,26 +266,17 @@ hab bldr job cancel [OPTIONS] <GROUP_ID>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr job demote
 
-**DESCRIPTION**
-
-```
 Demote packages from a completed build job to a specified channel
-```
-
 
 **USAGE**
 
 ```
 hab bldr job demote [FLAGS] [OPTIONS] <GROUP_ID> <CHANNEL>
 ```
-
 
 **FLAGS**
 
@@ -431,9 +287,6 @@ hab bldr job demote [FLAGS] [OPTIONS] <GROUP_ID> <CHANNEL>
 -V, --version        Prints version information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -443,26 +296,17 @@ hab bldr job demote [FLAGS] [OPTIONS] <GROUP_ID> <CHANNEL>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr job promote
 
-**DESCRIPTION**
-
-```
 Promote packages from a completed build job to a specified channel
-```
-
 
 **USAGE**
 
 ```
 hab bldr job promote [FLAGS] [OPTIONS] <GROUP_ID> <CHANNEL>
 ```
-
 
 **FLAGS**
 
@@ -473,9 +317,6 @@ hab bldr job promote [FLAGS] [OPTIONS] <GROUP_ID> <CHANNEL>
 -V, --version        Prints version information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -485,26 +326,17 @@ hab bldr job promote [FLAGS] [OPTIONS] <GROUP_ID> <CHANNEL>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr job start
 
-**DESCRIPTION**
-
-```
 Schedule a build job or group of jobs
-```
-
 
 **USAGE**
 
 ```
 hab bldr job start [FLAGS] [OPTIONS] <PKG_IDENT>
 ```
-
 
 **FLAGS**
 
@@ -514,9 +346,6 @@ hab bldr job start [FLAGS] [OPTIONS] <PKG_IDENT>
 -V, --version    Prints version information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -525,19 +354,11 @@ hab bldr job start [FLAGS] [OPTIONS] <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab bldr job status
 
-**DESCRIPTION**
-
-```
 Get the status of a job group
-```
-
 
 **USAGE**
 
@@ -545,16 +366,12 @@ Get the status of a job group
 hab bldr job status [OPTIONS] <GROUP_ID|--origin <ORIGIN>>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -564,19 +381,11 @@ hab bldr job status [OPTIONS] <GROUP_ID|--origin <ORIGIN>>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab cli
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat runtime config
-```
-
 
 **USAGE**
 
@@ -584,7 +393,6 @@ Commands relating to Habitat runtime config
 hab cli [SUBCOMMAND]
 ```
 
-
 **FLAGS**
 
 ```
@@ -592,32 +400,18 @@ hab cli [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-completers    Creates command-line completers for your shell.
-help          Prints this message or the help of the given subcommand(s)
-setup         Sets up the CLI with reasonable defaults.
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [completers](#hab-cli-completers): Creates command-line completers for your shell.
-* [setup](#hab-cli-setup): Sets up the CLI with reasonable defaults.
+| Command | Description |
+| ------- | ----------- |
+| [hab cli completers](#hab-cli-completers) | Creates command-line completers for your shell. |
+| [hab cli setup](#hab-cli-setup) | Sets up the CLI with reasonable defaults. |
+---
 
 ### hab cli completers
 
-**DESCRIPTION**
-
-```
 Creates command-line completers for your shell.
-```
-
 
 **USAGE**
 
@@ -625,7 +419,6 @@ Creates command-line completers for your shell.
 hab cli completers --shell <SHELL>
 ```
 
-
 **FLAGS**
 
 ```
@@ -636,22 +429,11 @@ hab cli completers --shell <SHELL>
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab cli setup
 
-**DESCRIPTION**
-
-```
 Sets up the CLI with reasonable defaults.
-```
-
 
 **USAGE**
 
@@ -659,7 +441,6 @@ Sets up the CLI with reasonable defaults.
 hab cli setup
 ```
 
-
 **FLAGS**
 
 ```
@@ -670,29 +451,17 @@ hab cli setup
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab config
 
-**DESCRIPTION**
-
-```
-Commands relating to Habitat runtime config
-```
-
+[1;33m» Installing core/hab-butterfly/0.54.0 from channel 'stable'[0m
 
 **USAGE**
 
 ```
 hab config [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -701,30 +470,17 @@ hab config [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-apply    Applies a configuration to a group of Habitat Supervisors
-help     Prints this message or the help of the given subcommand(s)
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [apply](#hab-config-apply): Applies a configuration to a group of Habitat Supervisors
+| Command | Description |
+| ------- | ----------- |
+| [hab config apply](#hab-config-apply) | Applies a configuration to a group of Habitat Supervisors |
+---
 
 ### hab config apply
 
-**DESCRIPTION**
-
-```
 Applies a configuration to a group of Habitat Supervisors
-```
-
 
 **USAGE**
 
@@ -732,16 +488,12 @@ Applies a configuration to a group of Habitat Supervisors
 hab config apply [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> [FILE]
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -753,26 +505,17 @@ hab config apply [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> [FILE]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab file
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat files
-```
-
 
 **USAGE**
 
 ```
 hab file [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -781,30 +524,17 @@ hab file [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-help      Prints this message or the help of the given subcommand(s)
-upload    Upload a file to the Supervisor ring.
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [upload](#hab-file-upload): Upload a file to the Supervisor ring.
+| Command | Description |
+| ------- | ----------- |
+| [hab file upload](#hab-file-upload) | Upload a file to the Supervisor ring. |
+---
 
 ### hab file upload
 
-**DESCRIPTION**
-
-```
 Upload a file to the Supervisor ring.
-```
-
 
 **USAGE**
 
@@ -812,16 +542,12 @@ Upload a file to the Supervisor ring.
 hab file upload [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> <FILE>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -833,26 +559,17 @@ hab file upload [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> <FILE>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab origin
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat origin keys
-```
-
 
 **USAGE**
 
 ```
 hab origin [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -861,37 +578,23 @@ hab origin [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-help    Prints this message or the help of the given subcommand(s)
-key     Commands relating to Habitat origin key maintenance
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [key](#hab-origin-key): Commands relating to Habitat origin key maintenance
+| Command | Description |
+| ------- | ----------- |
+| [hab origin key](#hab-origin-key) | Commands relating to Habitat origin key maintenance |
+---
 
 ### hab origin key
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat origin key maintenance
-```
-
 
 **USAGE**
 
 ```
 hab origin key [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -901,45 +604,27 @@ hab origin key [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-download    Download origin key(s) to HAB_CACHE_KEY_PATH
-export      Outputs the latest origin key contents to stdout
-generate    Generates a Habitat origin key
-help        Prints this message or the help of the given subcommand(s)
-import      Reads a stdin stream containing a public or secret origin key contents and writes the key to disk
-upload      Upload origin keys to Builder
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [download](#hab-origin-key-download): Download origin key(s) to HAB_CACHE_KEY_PATH
-* [export](#hab-origin-key-export): Outputs the latest origin key contents to stdout
-* [generate](#hab-origin-key-generate): Generates a Habitat origin key
-* [import](#hab-origin-key-import): Reads a stdin stream containing a public or secret origin key contents and writes the key to disk
-* [upload](#hab-origin-key-upload): Upload origin keys to Builder
+| Command | Description |
+| ------- | ----------- |
+| [hab origin key download](#hab-origin-key-download) | Download origin key(s) to HAB_CACHE_KEY_PATH |
+| [hab origin key export](#hab-origin-key-export) | Outputs the latest origin key contents to stdout |
+| [hab origin key generate](#hab-origin-key-generate) | Generates a Habitat origin key |
+| [hab origin key import](#hab-origin-key-import) | Reads a stdin stream containing a public or secret origin key contents and writes the key to disk |
+| [hab origin key upload](#hab-origin-key-upload) | Upload origin keys to Builder |
+---
 
 ### hab origin key download
 
-**DESCRIPTION**
-
-```
 Download origin key(s) to HAB_CACHE_KEY_PATH
-```
-
 
 **USAGE**
 
 ```
 hab origin key download [FLAGS] [OPTIONS] <ORIGIN> [REVISION]
 ```
-
 
 **FLAGS**
 
@@ -948,9 +633,6 @@ hab origin key download [FLAGS] [OPTIONS] <ORIGIN> [REVISION]
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -961,19 +643,11 @@ hab origin key download [FLAGS] [OPTIONS] <ORIGIN> [REVISION]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab origin key export
 
-**DESCRIPTION**
-
-```
 Outputs the latest origin key contents to stdout
-```
-
 
 **USAGE**
 
@@ -981,16 +655,12 @@ Outputs the latest origin key contents to stdout
 hab origin key export [OPTIONS] <ORIGIN>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1000,19 +670,11 @@ hab origin key export [OPTIONS] <ORIGIN>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab origin key generate
 
-**DESCRIPTION**
-
-```
 Generates a Habitat origin key
-```
-
 
 **USAGE**
 
@@ -1020,16 +682,12 @@ Generates a Habitat origin key
 hab origin key generate [ORIGIN]
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1039,26 +697,17 @@ hab origin key generate [ORIGIN]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab origin key import
 
-**DESCRIPTION**
-
-```
 Reads a stdin stream containing a public or secret origin key contents and writes the key to disk
-```
-
 
 **USAGE**
 
 ```
 hab origin key import
 ```
-
 
 **FLAGS**
 
@@ -1070,29 +719,17 @@ hab origin key import
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab origin key upload
 
-**DESCRIPTION**
-
-```
 Upload origin keys to Builder
-```
-
 
 **USAGE**
 
 ```
 hab origin key upload [FLAGS] [OPTIONS] <ORIGIN|--pubfile <PUBLIC_FILE>>
 ```
-
 
 **FLAGS**
 
@@ -1102,9 +739,6 @@ hab origin key upload [FLAGS] [OPTIONS] <ORIGIN|--pubfile <PUBLIC_FILE>>
 -V, --version    Prints version information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -1113,26 +747,17 @@ hab origin key upload [FLAGS] [OPTIONS] <ORIGIN|--pubfile <PUBLIC_FILE>>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab pkg
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat packages
-```
-
 
 **USAGE**
 
 ```
 hab pkg [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -1141,64 +766,34 @@ hab pkg [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-binds       Displays the binds for a service
-binlink     Creates a binlink for a package binary in a common 'PATH' location
-build       Builds a Plan using a Studio
-channels    Find out what channels a package belongs to
-config      Displays the default configuration options for a service
-demote      Demote a package from a specified channel
-env         Prints the runtime environment of a specific installed package
-exec        Executes a command using the 'PATH' context of an installed package
-export      Exports the package to the specified format
-hash        Generates a blake2b hashsum from a target at any given filepath
-help        Prints this message or the help of the given subcommand(s)
-install     Installs a Habitat package from Builder or locally from a Habitat Artifact
-path        Prints the path to a specific installed release of a package
-promote     Promote a package to a specified channel
-provides    Search installed Habitat packages for a given file
-search      Search for a package in Builder
-sign        Signs an archive with an origin key, generating a Habitat Artifact
-upload      Uploads a local Habitat Artifact to Builder
-verify      Verifies a Habitat Artifact with an origin key
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [binds](#hab-pkg-binds): Displays the binds for a service
-* [binlink](#hab-pkg-binlink): Creates a binlink for a package binary in a common 'PATH' location
-* [build](#hab-pkg-build): Builds a Plan using a Studio
-* [channels](#hab-pkg-channels): Find out what channels a package belongs to
-* [config](#hab-pkg-config): Displays the default configuration options for a service
-* [demote](#hab-pkg-demote): Demote a package from a specified channel
-* [env](#hab-pkg-env): Prints the runtime environment of a specific installed package
-* [exec](#hab-pkg-exec): Executes a command using the 'PATH' context of an installed package
-* [export](#hab-pkg-export): Exports the package to the specified format
-* [hash](#hab-pkg-hash): Generates a blake2b hashsum from a target at any given filepath
-* [install](#hab-pkg-install): Installs a Habitat package from Builder or locally from a Habitat Artifact
-* [path](#hab-pkg-path): Prints the path to a specific installed release of a package
-* [promote](#hab-pkg-promote): Promote a package to a specified channel
-* [provides](#hab-pkg-provides): Search installed Habitat packages for a given file
-* [search](#hab-pkg-search): Search for a package in Builder
-* [sign](#hab-pkg-sign): Signs an archive with an origin key, generating a Habitat Artifact
-* [upload](#hab-pkg-upload): Uploads a local Habitat Artifact to Builder
-* [verify](#hab-pkg-verify): Verifies a Habitat Artifact with an origin key
+| Command | Description |
+| ------- | ----------- |
+| [hab pkg binds](#hab-pkg-binds) | Displays the binds for a service |
+| [hab pkg binlink](#hab-pkg-binlink) | Creates a binlink for a package binary in a common 'PATH' location |
+| [hab pkg build](#hab-pkg-build) | Builds a Plan using a Studio |
+| [hab pkg channels](#hab-pkg-channels) | Find out what channels a package belongs to |
+| [hab pkg config](#hab-pkg-config) | Displays the default configuration options for a service |
+| [hab pkg demote](#hab-pkg-demote) | Demote a package from a specified channel |
+| [hab pkg env](#hab-pkg-env) | Prints the runtime environment of a specific installed package |
+| [hab pkg exec](#hab-pkg-exec) | Executes a command using the 'PATH' context of an installed package |
+| [hab pkg export](#hab-pkg-export) | Exports the package to the specified format |
+| [hab pkg hash](#hab-pkg-hash) | Generates a blake2b hashsum from a target at any given filepath |
+| [hab pkg install](#hab-pkg-install) | Installs a Habitat package from Builder or locally from a Habitat Artifact |
+| [hab pkg path](#hab-pkg-path) | Prints the path to a specific installed release of a package |
+| [hab pkg promote](#hab-pkg-promote) | Promote a package to a specified channel |
+| [hab pkg provides](#hab-pkg-provides) | Search installed Habitat packages for a given file |
+| [hab pkg search](#hab-pkg-search) | Search for a package in Builder |
+| [hab pkg sign](#hab-pkg-sign) | Signs an archive with an origin key, generating a Habitat Artifact |
+| [hab pkg upload](#hab-pkg-upload) | Uploads a local Habitat Artifact to Builder |
+| [hab pkg verify](#hab-pkg-verify) | Verifies a Habitat Artifact with an origin key |
+---
 
 ### hab pkg binds
 
-**DESCRIPTION**
-
-```
 Displays the binds for a service
-```
-
 
 **USAGE**
 
@@ -1206,16 +801,12 @@ Displays the binds for a service
 hab pkg binds <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1225,26 +816,17 @@ hab pkg binds <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg binlink
 
-**DESCRIPTION**
-
-```
 Creates a binlink for a package binary in a common 'PATH' location
-```
-
 
 **USAGE**
 
 ```
 hab pkg binlink [FLAGS] [OPTIONS] <PKG_IDENT> [BINARY]
 ```
-
 
 **FLAGS**
 
@@ -1253,9 +835,6 @@ hab pkg binlink [FLAGS] [OPTIONS] <PKG_IDENT> [BINARY]
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1266,26 +845,17 @@ hab pkg binlink [FLAGS] [OPTIONS] <PKG_IDENT> [BINARY]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg build
 
-**DESCRIPTION**
-
-```
 Builds a Plan using a Studio
-```
-
 
 **USAGE**
 
 ```
 hab pkg build [FLAGS] [OPTIONS] <PLAN_CONTEXT>
 ```
-
 
 **FLAGS**
 
@@ -1296,9 +866,6 @@ hab pkg build [FLAGS] [OPTIONS] <PLAN_CONTEXT>
 -V, --version    Prints version information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -1307,19 +874,11 @@ hab pkg build [FLAGS] [OPTIONS] <PLAN_CONTEXT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg channels
 
-**DESCRIPTION**
-
-```
 Find out what channels a package belongs to
-```
-
 
 **USAGE**
 
@@ -1327,16 +886,12 @@ Find out what channels a package belongs to
 hab pkg channels [OPTIONS] <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1346,19 +901,11 @@ hab pkg channels [OPTIONS] <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg config
 
-**DESCRIPTION**
-
-```
 Displays the default configuration options for a service
-```
-
 
 **USAGE**
 
@@ -1366,16 +913,12 @@ Displays the default configuration options for a service
 hab pkg config <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1385,19 +928,11 @@ hab pkg config <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg demote
 
-**DESCRIPTION**
-
-```
 Demote a package from a specified channel
-```
-
 
 **USAGE**
 
@@ -1405,16 +940,12 @@ Demote a package from a specified channel
 hab pkg demote [OPTIONS] <PKG_IDENT> <CHANNEL>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1425,19 +956,11 @@ hab pkg demote [OPTIONS] <PKG_IDENT> <CHANNEL>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg env
 
-**DESCRIPTION**
-
-```
 Prints the runtime environment of a specific installed package
-```
-
 
 **USAGE**
 
@@ -1445,16 +968,12 @@ Prints the runtime environment of a specific installed package
 hab pkg env <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1464,19 +983,11 @@ hab pkg env <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg exec
 
-**DESCRIPTION**
-
-```
 Executes a command using the 'PATH' context of an installed package
-```
-
 
 **USAGE**
 
@@ -1484,16 +995,12 @@ Executes a command using the 'PATH' context of an installed package
 hab pkg exec <PKG_IDENT> <CMD> [ARGS]...
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1505,19 +1012,11 @@ hab pkg exec <PKG_IDENT> <CMD> [ARGS]...
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg export
 
-**DESCRIPTION**
-
-```
 Exports the package to the specified format
-```
-
 
 **USAGE**
 
@@ -1525,16 +1024,12 @@ Exports the package to the specified format
 hab pkg export [OPTIONS] <FORMAT> <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1545,19 +1040,11 @@ hab pkg export [OPTIONS] <FORMAT> <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg hash
 
-**DESCRIPTION**
-
-```
 Generates a blake2b hashsum from a target at any given filepath
-```
-
 
 **USAGE**
 
@@ -1565,16 +1052,12 @@ Generates a blake2b hashsum from a target at any given filepath
 hab pkg hash [SOURCE]
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1584,26 +1067,17 @@ hab pkg hash [SOURCE]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg install
 
-**DESCRIPTION**
-
-```
 Installs a Habitat package from Builder or locally from a Habitat Artifact
-```
-
 
 **USAGE**
 
 ```
 hab pkg install [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>...
 ```
-
 
 **FLAGS**
 
@@ -1614,9 +1088,6 @@ hab pkg install [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>...
 -V, --version    Prints version information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -1625,19 +1096,11 @@ hab pkg install [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>...
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg path
 
-**DESCRIPTION**
-
-```
 Prints the path to a specific installed release of a package
-```
-
 
 **USAGE**
 
@@ -1645,16 +1108,12 @@ Prints the path to a specific installed release of a package
 hab pkg path <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1664,19 +1123,11 @@ hab pkg path <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg promote
 
-**DESCRIPTION**
-
-```
 Promote a package to a specified channel
-```
-
 
 **USAGE**
 
@@ -1684,16 +1135,12 @@ Promote a package to a specified channel
 hab pkg promote [OPTIONS] <PKG_IDENT> <CHANNEL>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1704,26 +1151,17 @@ hab pkg promote [OPTIONS] <PKG_IDENT> <CHANNEL>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg provides
 
-**DESCRIPTION**
-
-```
 Search installed Habitat packages for a given file
-```
-
 
 **USAGE**
 
 ```
 hab pkg provides [FLAGS] <FILE>
 ```
-
 
 **FLAGS**
 
@@ -1734,9 +1172,6 @@ hab pkg provides [FLAGS] <FILE>
 -V, --version    Prints version information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -1745,19 +1180,11 @@ hab pkg provides [FLAGS] <FILE>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg search
 
-**DESCRIPTION**
-
-```
 Search for a package in Builder
-```
-
 
 **USAGE**
 
@@ -1765,16 +1192,12 @@ Search for a package in Builder
 hab pkg search [OPTIONS] <SEARCH_TERM>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1784,19 +1207,11 @@ hab pkg search [OPTIONS] <SEARCH_TERM>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg sign
 
-**DESCRIPTION**
-
-```
 Signs an archive with an origin key, generating a Habitat Artifact
-```
-
 
 **USAGE**
 
@@ -1804,16 +1219,12 @@ Signs an archive with an origin key, generating a Habitat Artifact
 hab pkg sign [OPTIONS] <SOURCE> <DEST>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1825,19 +1236,11 @@ hab pkg sign [OPTIONS] <SOURCE> <DEST>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg upload
 
-**DESCRIPTION**
-
-```
 Uploads a local Habitat Artifact to Builder
-```
-
 
 **USAGE**
 
@@ -1845,16 +1248,12 @@ Uploads a local Habitat Artifact to Builder
 hab pkg upload [OPTIONS] <HART_FILE>...
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1865,19 +1264,11 @@ hab pkg upload [OPTIONS] <HART_FILE>...
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab pkg verify
 
-**DESCRIPTION**
-
-```
 Verifies a Habitat Artifact with an origin key
-```
-
 
 **USAGE**
 
@@ -1885,16 +1276,12 @@ Verifies a Habitat Artifact with an origin key
 hab pkg verify <SOURCE>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1904,26 +1291,17 @@ hab pkg verify <SOURCE>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab plan
 
-**DESCRIPTION**
-
-```
 Commands relating to plans and other app-specific configuration.
-```
-
 
 **USAGE**
 
 ```
 hab plan [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -1932,30 +1310,17 @@ hab plan [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-help    Prints this message or the help of the given subcommand(s)
-init    Generates common package specific configuration files. Executing without argument will create a$2abitat directory in your current folder for the plan. If PKG_NAME is specified it will create a$2older with that name. Environment variables (those starting with 'pkg_') that are set will be used in$2he generated plan
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [init](#hab-plan-init): Generates common package specific configuration files. Executing without argument will create a$2abitat directory in your current folder for the plan. If PKG_NAME is specified it will create a$2older with that name. Environment variables (those starting with 'pkg_') that are set will be used in$2he generated plan
+| Command | Description |
+| ------- | ----------- |
+| [hab plan init](#hab-plan-init) | Generates common package specific configuration files. Executing without argument will create a$2abitat directory in your current folder for the plan. If PKG_NAME is specified it will create a$2older with that name. Environment variables (those starting with 'pkg_') that are set will be used in$2he generated plan |
+---
 
 ### hab plan init
 
-**DESCRIPTION**
-
-```
 Generates common package specific configuration files. Executing without argument will create a habitat directory in
-```
-
 
 **USAGE**
 
@@ -1963,20 +1328,16 @@ Generates common package specific configuration files. Executing without argumen
 hab plan init [FLAGS] [OPTIONS] [PKG_NAME]
 ```
 
-
 **FLAGS**
 
 ```
-    --windows           Use a Windows Powershell plan template
+--windows           Use a Windows Powershell plan template
     --with-all          Generate omnibus plan with all available plan options
     --with-callbacks    Include callback functions in template
     --with-docs         Include plan options documentation
 -h, --help              Prints help information
 -V, --version           Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -1986,26 +1347,17 @@ hab plan init [FLAGS] [OPTIONS] [PKG_NAME]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab ring
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat rings
-```
-
 
 **USAGE**
 
 ```
 hab ring [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -2014,30 +1366,17 @@ hab ring [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-help    Prints this message or the help of the given subcommand(s)
-key     Commands relating to Habitat ring keys
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [key](#hab-ring-key): Commands relating to Habitat ring keys
+| Command | Description |
+| ------- | ----------- |
+| [hab ring key](#hab-ring-key) | Commands relating to Habitat ring keys |
+---
 
 ### hab ring key
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat ring keys
-```
-
 
 **USAGE**
 
@@ -2045,7 +1384,6 @@ Commands relating to Habitat ring keys
 hab ring key [SUBCOMMAND]
 ```
 
-
 **FLAGS**
 
 ```
@@ -2054,34 +1392,19 @@ hab ring key [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-export      Outputs the latest ring key contents to stdout
-generate    Generates a Habitat ring key
-help        Prints this message or the help of the given subcommand(s)
-import      Reads a stdin stream containing ring key contents and writes the key to disk
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [export](#hab-ring-key-export): Outputs the latest ring key contents to stdout
-* [generate](#hab-ring-key-generate): Generates a Habitat ring key
-* [import](#hab-ring-key-import): Reads a stdin stream containing ring key contents and writes the key to disk
+| Command | Description |
+| ------- | ----------- |
+| [hab ring key export](#hab-ring-key-export) | Outputs the latest ring key contents to stdout |
+| [hab ring key generate](#hab-ring-key-generate) | Generates a Habitat ring key |
+| [hab ring key import](#hab-ring-key-import) | Reads a stdin stream containing ring key contents and writes the key to disk |
+---
 
 ### hab ring key export
 
-**DESCRIPTION**
-
-```
 Outputs the latest ring key contents to stdout
-```
-
 
 **USAGE**
 
@@ -2089,16 +1412,12 @@ Outputs the latest ring key contents to stdout
 hab ring key export <RING>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -2108,19 +1427,11 @@ hab ring key export <RING>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab ring key generate
 
-**DESCRIPTION**
-
-```
 Generates a Habitat ring key
-```
-
 
 **USAGE**
 
@@ -2128,16 +1439,12 @@ Generates a Habitat ring key
 hab ring key generate <RING>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -2147,26 +1454,17 @@ hab ring key generate <RING>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab ring key import
 
-**DESCRIPTION**
-
-```
 Reads a stdin stream containing ring key contents and writes the key to disk
-```
-
 
 **USAGE**
 
 ```
 hab ring key import
 ```
-
 
 **FLAGS**
 
@@ -2178,17 +1476,11 @@ hab ring key import
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab studio
 
-
+[1;33m» Installing core/hab-studio/0.54.0 from channel 'stable'[0m
 
 **USAGE**
 
@@ -2201,29 +1493,15 @@ hab studio [FLAGS] [OPTIONS] <SUBCOMMAND> [ARG ..]
 
 **SUBCOMMANDS**
 
-```
-build     Build using a Studio
-enter     Interactively enter a Studio
-help      Prints this message
-new       Creates a new Studio
-rm        Destroys a Studio
-run       Run a command in a Studio
-version   Prints version information
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [build](#hab-studio-build): Build using a Studio
-* [enter](#hab-studio-enter): Interactively enter a Studio
-* [new](#hab-studio-new): Creates a new Studio
-* [rm](#hab-studio-rm): Destroys a Studio
-* [run](#hab-studio-run): Run a command in a Studio
-* [version](#hab-studio-version): Prints version information
+| Command | Description |
+| ------- | ----------- |
+| [hab studio build](#hab-studio-build) | Build using a Studio |
+| [hab studio enter](#hab-studio-enter) | Interactively enter a Studio |
+| [hab studio new](#hab-studio-new) | Creates a new Studio |
+| [hab studio rm](#hab-studio-rm) | Destroys a Studio |
+| [hab studio run](#hab-studio-run) | Run a command in a Studio |
+| [hab studio version](#hab-studio-version) | Prints version information |
+---
 
 ### hab studio build
 
@@ -2235,7 +1513,6 @@ version   Prints version information
 hab studio [COMMON_FLAGS] [COMMON_OPTIONS] build [FLAGS] [PLAN_DIR]
 ```
 
-
 **FLAGS**
 
 ```
@@ -2245,13 +1522,7 @@ hab studio [COMMON_FLAGS] [COMMON_OPTIONS] build [FLAGS] [PLAN_DIR]
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab studio enter
 
@@ -2267,14 +1538,7 @@ hab studio [COMMON_FLAGS] [COMMON_OPTIONS] enter
 
 
 
-
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab studio new
 
@@ -2290,14 +1554,7 @@ hab studio [COMMON_FLAGS] [COMMON_OPTIONS] new
 
 
 
-
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab studio rm
 
@@ -2313,14 +1570,7 @@ hab studio [COMMON_FLAGS] [COMMON_OPTIONS] rm
 
 
 
-
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab studio run
 
@@ -2336,14 +1586,7 @@ hab studio [COMMON_FLAGS] [COMMON_OPTIONS] run [CMD] [ARG ..]
 
 
 
-
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab studio version
 
@@ -2354,18 +1597,11 @@ hab studio [COMMON_FLAGS] [COMMON_OPTIONS] run [CMD] [ARG ..]
 
 
 
-
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab sup
 
-
+[1;33m» Installing core/hab-sup/0.54.0 from channel 'stable'[0m
 
 **USAGE**
 
@@ -2373,59 +1609,36 @@ hab studio [COMMON_FLAGS] [COMMON_OPTIONS] run [CMD] [ARG ..]
 hab sup [FLAGS] <SUBCOMMAND>
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 -V, --version     Prints version information
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-bash      Start an interactive Bash-like shell
-config    Displays the default configuration options for a service
-help      Prints this message or the help of the given subcommand(s)
-load      Load a service to be started and supervised by Habitat from a package or artifact. Services started in$2his manner will persist through Supervisor restarts.
-run       Run the Habitat Supervisor
-sh        Start an interactive Bourne-like shell
-start     Start a loaded, but stopped, Habitat service or a transient service from a package or artifact. If the$2abitat Supervisor is not already running this will additionally start one for you.
-status    Query the status of Habitat services.
-stop      Stop a running Habitat service.
-term      Gracefully terminate the Habitat Supervisor and all of its running services
-unload    Unload a persistent or transient service started by the Habitat Supervisor. If the Supervisor is$2unning when the service is unloaded the service will be stopped.
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [bash](#hab-sup-bash): Start an interactive Bash-like shell
-* [config](#hab-sup-config): Displays the default configuration options for a service
-* [load](#hab-sup-load): Load a service to be started and supervised by Habitat from a package or artifact. Services started in$2his manner will persist through Supervisor restarts.
-* [run](#hab-sup-run): Run the Habitat Supervisor
-* [sh](#hab-sup-sh): Start an interactive Bourne-like shell
-* [start](#hab-sup-start): Start a loaded, but stopped, Habitat service or a transient service from a package or artifact. If the$2abitat Supervisor is not already running this will additionally start one for you.
-* [status](#hab-sup-status): Query the status of Habitat services.
-* [stop](#hab-sup-stop): Stop a running Habitat service.
-* [term](#hab-sup-term): Gracefully terminate the Habitat Supervisor and all of its running services
-* [unload](#hab-sup-unload): Unload a persistent or transient service started by the Habitat Supervisor. If the Supervisor is$2unning when the service is unloaded the service will be stopped.
+| Command | Description |
+| ------- | ----------- |
+| [hab sup bash](#hab-sup-bash) | Start an interactive Bash-like shell |
+| [hab sup config](#hab-sup-config) | Displays the default configuration options for a service |
+| [hab sup load](#hab-sup-load) | Load a service to be started and supervised by Habitat from a package or artifact. Services started in$2his manner will persist through Supervisor restarts. |
+| [hab sup run](#hab-sup-run) | Run the Habitat Supervisor |
+| [hab sup sh](#hab-sup-sh) | Start an interactive Bourne-like shell |
+| [hab sup start](#hab-sup-start) | Start a loaded, but stopped, Habitat service or a transient service from a package or artifact. If the$2abitat Supervisor is not already running this will additionally start one for you. |
+| [hab sup status](#hab-sup-status) | Query the status of Habitat services. |
+| [hab sup stop](#hab-sup-stop) | Stop a running Habitat service. |
+| [hab sup term](#hab-sup-term) | Gracefully terminate the Habitat Supervisor and all of its running services |
+| [hab sup unload](#hab-sup-unload) | Unload a persistent or transient service started by the Habitat Supervisor. If the Supervisor is$2unning when the service is unloaded the service will be stopped. |
+---
 
 ### hab sup bash
 
-**DESCRIPTION**
-
-```
 Start an interactive Bash-like shell
-```
-
 
 **USAGE**
 
@@ -2433,11 +1646,10 @@ Start an interactive Bash-like shell
 hab sup bash [FLAGS]
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 ```
@@ -2445,22 +1657,11 @@ hab sup bash [FLAGS]
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup config
 
-**DESCRIPTION**
-
-```
 Displays the default configuration options for a service
-```
-
 
 **USAGE**
 
@@ -2468,17 +1669,13 @@ Displays the default configuration options for a service
 hab sup config [FLAGS] <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 ```
-
-
-
 
 **ARGS**
 
@@ -2488,26 +1685,17 @@ hab sup config [FLAGS] <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup load
 
-**DESCRIPTION**
-
-```
 Load a service to be started and supervised by Habitat from a package or artifact. Services started in this manner will
-```
-
 
 **USAGE**
 
 ```
 hab sup load [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 ```
-
 
 **FLAGS**
 
@@ -2518,9 +1706,6 @@ hab sup load [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 -h, --help        Prints help information
 ```
 
-
-
-
 **ARGS**
 
 ```
@@ -2530,19 +1715,11 @@ hab sup load [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup run
 
-**DESCRIPTION**
-
-```
-Run the Habitat Supervisor
-```
-
+[1;33m» Installing core/hab-launcher from channel 'stable'[0m
 
 **USAGE**
 
@@ -2550,7 +1727,6 @@ Run the Habitat Supervisor
 hab sup run [FLAGS] [OPTIONS]
 ```
 
-
 **FLAGS**
 
 ```
@@ -2564,22 +1740,11 @@ hab sup run [FLAGS] [OPTIONS]
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup sh
 
-**DESCRIPTION**
-
-```
 Start an interactive Bourne-like shell
-```
-
 
 **USAGE**
 
@@ -2587,11 +1752,10 @@ Start an interactive Bourne-like shell
 hab sup sh [FLAGS]
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 ```
@@ -2599,29 +1763,17 @@ hab sup sh [FLAGS]
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup start
 
-**DESCRIPTION**
-
-```
 Start a loaded, but stopped, Habitat service or a transient service from a package or artifact. If the Habitat
-```
-
 
 **USAGE**
 
 ```
 hab sup start [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 ```
-
 
 **FLAGS**
 
@@ -2632,9 +1784,6 @@ hab sup start [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 -v                      Verbose output; shows line numbers
 -h, --help              Prints help information
 ```
-
-
-
 
 **ARGS**
 
@@ -2645,19 +1794,11 @@ hab sup start [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup status
 
-**DESCRIPTION**
-
-```
 Query the status of Habitat services.
-```
-
 
 **USAGE**
 
@@ -2665,17 +1806,13 @@ Query the status of Habitat services.
 hab sup status [FLAGS] [OPTIONS] [PKG_IDENT]
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 ```
-
-
-
 
 **ARGS**
 
@@ -2685,19 +1822,11 @@ hab sup status [FLAGS] [OPTIONS] [PKG_IDENT]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup stop
 
-**DESCRIPTION**
-
-```
 Stop a running Habitat service.
-```
-
 
 **USAGE**
 
@@ -2705,17 +1834,13 @@ Stop a running Habitat service.
 hab sup stop [FLAGS] [OPTIONS] <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 ```
-
-
-
 
 **ARGS**
 
@@ -2725,19 +1850,11 @@ hab sup stop [FLAGS] [OPTIONS] <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup term
 
-**DESCRIPTION**
-
-```
 Gracefully terminate the Habitat Supervisor and all of its running services
-```
-
 
 **USAGE**
 
@@ -2745,11 +1862,10 @@ Gracefully terminate the Habitat Supervisor and all of its running services
 hab sup term [FLAGS] [OPTIONS]
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 ```
@@ -2757,22 +1873,11 @@ hab sup term [FLAGS] [OPTIONS]
 
 
 
-
-
-
-
-[&uarr; Top](#)
-
-
+---
 
 ### hab sup unload
 
-**DESCRIPTION**
-
-```
 Unload a persistent or transient service started by the Habitat Supervisor. If the Supervisor is running when the
-```
-
 
 **USAGE**
 
@@ -2780,17 +1885,13 @@ Unload a persistent or transient service started by the Habitat Supervisor. If t
 hab sup unload [FLAGS] [OPTIONS] <PKG_IDENT>
 ```
 
-
 **FLAGS**
 
 ```
-    --no-color    Turn ANSI color off
+--no-color    Turn ANSI color off
 -v                Verbose output; shows line numbers
 -h, --help        Prints help information
 ```
-
-
-
 
 **ARGS**
 
@@ -2800,26 +1901,17 @@ hab sup unload [FLAGS] [OPTIONS] <PKG_IDENT>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab svc
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat services
-```
-
 
 **USAGE**
 
 ```
 hab svc [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -2828,39 +1920,22 @@ hab svc [SUBCOMMAND]
 ```
 
 
-**SUBCOMMANDS**
-
-```
-help    Prints this message or the help of the given subcommand(s)
-key     Commands relating to Habitat service keys
-```
-
-
-
-
 **ALIASES**
 
 ```
-load       Alias for: 'sup load'
-unload     Alias for: 'sup unload'
-start      Alias for: 'sup start'
-stop       Alias for: 'sup stop'
-status     Alias for: 'sup status'
+load       Alias for: 'sup load'unload     Alias for: 'sup unload'start      Alias for: 'sup start'stop       Alias for: 'sup stop'status     Alias for: 'sup status'
 ```
 
+**SUBCOMMANDS**
 
-[&uarr; Top](#)
-
-* [key](#hab-svc-key): Commands relating to Habitat service keys
+| Command | Description |
+| ------- | ----------- |
+| [hab svc key](#hab-svc-key) | Commands relating to Habitat service keys |
+---
 
 ### hab svc key
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat service keys
-```
-
 
 **USAGE**
 
@@ -2868,7 +1943,6 @@ Commands relating to Habitat service keys
 hab svc key [SUBCOMMAND]
 ```
 
-
 **FLAGS**
 
 ```
@@ -2877,30 +1951,17 @@ hab svc key [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-generate    Generates a Habitat service key
-help        Prints this message or the help of the given subcommand(s)
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [generate](#hab-svc-key-generate): Generates a Habitat service key
+| Command | Description |
+| ------- | ----------- |
+| [hab svc key generate](#hab-svc-key-generate) | Generates a Habitat service key |
+---
 
 ### hab svc key generate
 
-**DESCRIPTION**
-
-```
 Generates a Habitat service key
-```
-
 
 **USAGE**
 
@@ -2908,16 +1969,12 @@ Generates a Habitat service key
 hab svc key generate <SERVICE_GROUP> [ORG]
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -2928,26 +1985,17 @@ hab svc key generate <SERVICE_GROUP> [ORG]
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
 ## hab user
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat users
-```
-
 
 **USAGE**
 
 ```
 hab user [SUBCOMMAND]
 ```
-
 
 **FLAGS**
 
@@ -2956,30 +2004,17 @@ hab user [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-help    Prints this message or the help of the given subcommand(s)
-key     Commands relating to Habitat user keys
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [key](#hab-user-key): Commands relating to Habitat user keys
+| Command | Description |
+| ------- | ----------- |
+| [hab user key](#hab-user-key) | Commands relating to Habitat user keys |
+---
 
 ### hab user key
 
-**DESCRIPTION**
-
-```
 Commands relating to Habitat user keys
-```
-
 
 **USAGE**
 
@@ -2987,7 +2022,6 @@ Commands relating to Habitat user keys
 hab user key [SUBCOMMAND]
 ```
 
-
 **FLAGS**
 
 ```
@@ -2996,30 +2030,17 @@ hab user key [SUBCOMMAND]
 ```
 
 
+
 **SUBCOMMANDS**
 
-```
-generate    Generates a Habitat user key
-help        Prints this message or the help of the given subcommand(s)
-```
-
-
-
-
-
-
-[&uarr; Top](#)
-
-* [generate](#hab-user-key-generate): Generates a Habitat user key
+| Command | Description |
+| ------- | ----------- |
+| [hab user key generate](#hab-user-key-generate) | Generates a Habitat user key |
+---
 
 ### hab user key generate
 
-**DESCRIPTION**
-
-```
 Generates a Habitat user key
-```
-
 
 **USAGE**
 
@@ -3027,16 +2048,12 @@ Generates a Habitat user key
 hab user key generate <USER>
 ```
 
-
 **FLAGS**
 
 ```
 -h, --help       Prints help information
 -V, --version    Prints version information
 ```
-
-
-
 
 **ARGS**
 
@@ -3046,8 +2063,5 @@ hab user key generate <USER>
 
 
 
-
-[&uarr; Top](#)
-
-
+---
 
