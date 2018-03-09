@@ -682,7 +682,7 @@ Commands relating to Habitat runtime config
 **USAGE**
 
 ```
-hab-butterfly config [SUBCOMMAND]
+hab config [SUBCOMMAND]
 ```
 
 **FLAGS**
@@ -720,7 +720,7 @@ Applies a configuration to a group of Habitat Supervisors
 **USAGE**
 
 ```
-hab-butterfly config apply [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> [FILE]
+hab config apply [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> [FILE]
 ```
 
 **FLAGS**
@@ -760,7 +760,7 @@ Commands relating to Habitat files
 **USAGE**
 
 ```
-hab-butterfly file [SUBCOMMAND]
+hab file [SUBCOMMAND]
 ```
 
 **FLAGS**
@@ -798,7 +798,7 @@ Upload a file to the Supervisor ring.
 **USAGE**
 
 ```
-hab-butterfly file upload [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> <FILE>
+hab file upload [OPTIONS] <SERVICE_GROUP> <VERSION_NUMBER> <FILE>
 ```
 
 **FLAGS**
@@ -2163,7 +2163,7 @@ None.
 **USAGE**
 
 ```
-hab-studio [FLAGS] [OPTIONS] <SUBCOMMAND> [ARG ..]
+hab studio [FLAGS] [OPTIONS] <SUBCOMMAND> [ARG ..]
 ```
 
 **FLAGS**
@@ -2211,7 +2211,7 @@ None.
 **USAGE**
 
 ```
-hab-studio [COMMON_FLAGS] [COMMON_OPTIONS] build [FLAGS] [PLAN_DIR]
+hab studio [COMMON_FLAGS] [COMMON_OPTIONS] build [FLAGS] [PLAN_DIR]
 ```
 
 **FLAGS**
@@ -2248,7 +2248,7 @@ None.
 **USAGE**
 
 ```
-hab-studio [COMMON_FLAGS] [COMMON_OPTIONS] enter
+hab studio [COMMON_FLAGS] [COMMON_OPTIONS] enter
 ```
 
 **FLAGS**
@@ -2285,7 +2285,7 @@ None.
 **USAGE**
 
 ```
-hab-studio [COMMON_FLAGS] [COMMON_OPTIONS] new
+hab studio [COMMON_FLAGS] [COMMON_OPTIONS] new
 ```
 
 **FLAGS**
@@ -2322,7 +2322,7 @@ None.
 **USAGE**
 
 ```
-hab-studio [COMMON_FLAGS] [COMMON_OPTIONS] rm
+hab studio [COMMON_FLAGS] [COMMON_OPTIONS] rm
 ```
 
 **FLAGS**
@@ -2359,7 +2359,7 @@ None.
 **USAGE**
 
 ```
-hab-studio [COMMON_FLAGS] [COMMON_OPTIONS] run [CMD] [ARG ..]
+hab studio [COMMON_FLAGS] [COMMON_OPTIONS] run [CMD] [ARG ..]
 ```
 
 **FLAGS**
@@ -2396,7 +2396,7 @@ None.
 **USAGE**
 
 ```
-undefined
+
 ```
 
 **FLAGS**
@@ -2433,7 +2433,7 @@ None.
 **USAGE**
 
 ```
-hab-sup [FLAGS] <SUBCOMMAND>
+hab sup [FLAGS] <SUBCOMMAND>
 ```
 
 **FLAGS**
@@ -2492,7 +2492,7 @@ Start an interactive Bash-like shell
 **USAGE**
 
 ```
-hab-sup bash [FLAGS]
+hab sup bash [FLAGS]
 ```
 
 **FLAGS**
@@ -2531,7 +2531,7 @@ Displays the default configuration options for a service
 **USAGE**
 
 ```
-hab-sup config [FLAGS] <PKG_IDENT>
+hab sup config [FLAGS] <PKG_IDENT>
 ```
 
 **FLAGS**
@@ -2570,7 +2570,7 @@ Load a service to be started and supervised by Habitat from a package or artifac
 **USAGE**
 
 ```
-hab-sup load [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
+hab sup load [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 ```
 
 **FLAGS**
@@ -2611,7 +2611,7 @@ Run the Habitat Supervisor
 **USAGE**
 
 ```
-hab-sup run [FLAGS] [OPTIONS]
+hab sup run [FLAGS] [OPTIONS]
 ```
 
 **FLAGS**
@@ -2652,7 +2652,7 @@ Start an interactive Bourne-like shell
 **USAGE**
 
 ```
-hab-sup sh [FLAGS]
+hab sup sh [FLAGS]
 ```
 
 **FLAGS**
@@ -2691,7 +2691,7 @@ Start a loaded, but stopped, Habitat service or a transient service from a packa
 **USAGE**
 
 ```
-hab-sup start [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
+hab sup start [FLAGS] [OPTIONS] <PKG_IDENT_OR_ARTIFACT>
 ```
 
 **FLAGS**
@@ -2733,7 +2733,7 @@ Query the status of Habitat services.
 **USAGE**
 
 ```
-hab-sup status [FLAGS] [OPTIONS] [PKG_IDENT]
+hab sup status [FLAGS] [OPTIONS] [PKG_IDENT]
 ```
 
 **FLAGS**
@@ -2772,7 +2772,7 @@ Stop a running Habitat service.
 **USAGE**
 
 ```
-hab-sup stop [FLAGS] [OPTIONS] <PKG_IDENT>
+hab sup stop [FLAGS] [OPTIONS] <PKG_IDENT>
 ```
 
 **FLAGS**
@@ -2811,7 +2811,7 @@ Gracefully terminate the Habitat Supervisor and all of its running services
 **USAGE**
 
 ```
-hab-sup term [FLAGS] [OPTIONS]
+hab sup term [FLAGS] [OPTIONS]
 ```
 
 **FLAGS**
@@ -2850,7 +2850,7 @@ Unload a persistent or transient service started by the Habitat Supervisor. If t
 **USAGE**
 
 ```
-hab-sup unload [FLAGS] [OPTIONS] <PKG_IDENT>
+hab sup unload [FLAGS] [OPTIONS] <PKG_IDENT>
 ```
 
 **FLAGS**

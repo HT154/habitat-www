@@ -41,7 +41,7 @@ function parse(command, out) {
     command: command,
     name: result.name,
     description: result.description,
-    usage: result.USAGE,
+    usage: result.USAGE || [],
     flags: result.FLAGS || [],
     args: result.ARGS || [],
     subcommands: result.SUBCOMMANDS || [],
@@ -86,7 +86,7 @@ ${parsed.description}
 **USAGE**
 
 \`\`\`
-${parsed.usage}
+${parsed.usage.join('\n').replace(/^hab-/, 'hab ').replace(/hab butterfly/, 'hab')}
 \`\`\`
 
 **FLAGS**
