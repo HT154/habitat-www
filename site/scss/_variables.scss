@@ -1,0 +1,50 @@
+/* =============================
+Breakpoints
+============================= */
+$breakpoints: (
+  zero:     0px,
+  tiny:   419px,
+  small:  767px,
+  medium: 992px,
+  large: 1200px
+) !default;
+
+@mixin breakpoint($min, $max: false) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $min) {
+    @if ($max) {
+      @media (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+        @content;
+      }
+    }
+    @else {
+      @media (min-width: map-get($breakpoints, $min)) {
+        @content;
+      }
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @if ($max) {
+      @media (min-width: $min) and (max-width: $max) {
+        @content;
+      }
+    }
+    @else {
+      @media (min-width: $min) {
+        @content;
+      }
+    }
+  }
+}
+
+/* =============================
+Layout
+============================= */
+$layout-max-width: 1200px;
+
+/* =============================
+Grid
+============================= */
+$grid-columns: 12;
+$grid-gap: 20px;

@@ -1,36 +1,261 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Habitat</title>
-    <meta name="description" content="Habitat - Automation that travels with the app. Habitat allows any app to be independent of any particular infrastructure environment, like containers or PaaS.">
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="/js/main.js"></script>
-    <script src="/js/app.js"></script>
-  </head>
-  <body>
-    <div class="page home">
-      <nav>
-        <header>
-          {{ partial "header"}}
-        </header>
-      </nav>
-      <main>
-        <h1>Build your application to run anywhere and manage it through its lifecycle.</h1>
-        <p>
-          Habitat is open-source software that not only creates platform-independent build artifacts,
-          but also provides built-in deployment and management capabilities.
-        </p>
-      </main>
-      <footer>
-        {{ partial "footer"}}
-      </footer>
-    </div>
-    <script>
-        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-XXXXXXXX-X','auto');ga('send','pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habitat</title>
+  <meta name="description" content="Habitat - Automation that travels with the app. Habitat allows any app to be independent of any particular infrastructure environment, like containers or PaaS.">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.js"></script>
+  <script src="/js/app.js"></script>
+</head>
+
+<body class="page-home">
+  <div class="layout-standard layout-full">
+    <nav>
+      <header>
+        {{ partial "header"}}
+      </header>
+    </nav>
+    <main>
+      <section class="home-hero layout-halves layout-small-full">
+        <div>
+          <h1 class="home--hero--heading">Build applications to run anywhere and manage them throughout their lifecycle. </h1>
+          <p class="hero--subtitle">Habitat is open source software that creates platform-independent build artifacts and provides built-in deployment
+            and management capabilities.</p>
+          <div>
+            <a href="/learn" class="button cta">Get Started</a>
+            <a href="http://github.com/habitat-sh/habitat" class="button github with-icon">View on GitHub</a>
+          </div>
+        </div>
+        <div class="video-with-cat">
+          <iframe src="https://www.youtube.com/embed/lR7m1XzDHHg?rel=0" allow="autoplay; encrypted-media" wmode="transparent" allowfullscreen=""
+            kwframeid="1" width="560" height="315" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section class="layout-thirds layout-small-full">
+        <div class="card no-hover">
+          <img src="/images/icons/icon-cloud-done-3fd89ee5.svg">
+          <h3>Move existing applications to a cloud-friendly architecture.</h3>
+          <p>Get up and running with Docker containers, AWS ECR, Kubernetes, virtual machines, and more. All from a single build
+            artifact.
+          </p>
+        </div>
+        <div class="card no-hover">
+          <img src="/images/icons/icon-touch-app-e2deea93.svg">
+          <h3>Build, deploy, and manage all applications the same way.</h3>
+          <p>Habitat packages include all the tooling needed to ship and run applications. Adopt as much as you need, when you
+            need it.</p>
+        </div>
+        <div class="card no-hover">
+          <img src="/images/icons/icon-view-c5ec0bcf.svg">
+          <h3>Know exactly what software is running in production.</h3>
+          <p>Complete dependency management at build time. Know exactly which version of every dependency is running on each
+            node via our API.</p>
+        </div>
+      </section>
+      <section class="layout-halves layout-small-full">
+        <div>
+          <h2 class="h2">Habitat makes it easier to run your applications on any platform.</h2>
+          <p class="mb-0">
+            <a href="/docs/diagrams" class="with-arrow text-white underline">See how it works</a>
+          </p>
+          <p class="mb-0">
+            <a href="/enterprise/" class="with-arrow text-white underline">Get enterprise support</a>
+          </p>
+        </div>
+        <div>
+          <ul class="home--platform-logos">
+            <li>
+              <span class="logo-icon kubernetes" title="Kubernetes"></span>
+            </li>
+            <li>
+              <span class="logo-icon docker" title="Docker"></span>
+            </li>
+            <li>
+              <span class="logo-icon mesos" title="Mesos"></span>
+            </li>
+          </ul>
+          <ul class="home--platform-logos mb-0">
+            <li>
+              <span class="logo-icon cloudfoundry" title="Cloud Foundry"></span>
+            </li>
+            <li>
+              <span class="logo-icon coreos" title="CoreOS"></span>
+            </li>
+            <li>
+              <span class="logo-icon mesosphere" title="Mesosphere"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="layout-row">
+        <h2 class="text-align-center">Automate delivering applications and services across your estate.</h2>
+        <p class="text-align-center">This reference diagram shows how Habitat can be used to build, deploy and manage applications.</p>
+      </section>
+      <section class="layout-row">
+        <div class="row">
+          <ul class="carousel-infographic" data-currentidx="0">
+            <li class="carousel-infographic-0 is-active" data-idx="0">
+              <span class="infographic-label">
+                <span>Write Plan</span>
+              </span>
+              <span class="infographic-cell">Habitat Studio</span>
+            </li>
+            <li class="carousel-infographic-1" data-idx="1">
+              <span class="infographic-label">
+                <span>Build</span>
+              </span>
+              <span class="infographic-cell">Habitat Builder</span>
+            </li>
+            <li class="carousel-infographic-2" data-idx="2">
+              <span class="infographic-label">
+                <span>Deploy</span>
+              </span>
+              <span class="infographic-cell logos-deploy" title="Docker, Kubernetes, CoreOS, Mesos"></span>
+            </li>
+            <li class="carousel-infographic-3" data-idx="3">
+              <span class="infographic-label">
+                <span>Run</span>
+              </span>
+              <span class="infographic-cell logos-run" title="Cloud Foundry, Mesosphere, VMware"></span>
+            </li>
+            <li class="carousel-infographic-4" data-idx="4">
+              <span class="infographic-label">
+                <span>Manage</span>
+              </span>
+              <span class="infographic-cell">Habitat Supervisor</span>
+            </li>
+          </ul>
+        </div>
+        <div class="row home--carousel-content" data-currentidx="0">
+          <div class="carousel-nav-arrow arrow-left" data-type="prev"></div>
+          <div class="carousel-nav-arrow arrow-right" data-type="next"></div>
+          <div class="columns small-12 carousel-slide is-active">
+            <div class="row carousel-slide-title">
+              <div class="columns small-12 h3 text-align-center">Write a Habitat plan for your application</div>
+            </div>
+            <div class="row carousel-bullets">
+              <div class="columns small-12 medium-3 medium-offset-1">
+                <p>Create your application in your language and code editor of choice.</p>
+              </div>
+              <div class="columns small-12 medium-4">
+                <p>Define your application using a Habitat plan to create an immutable artifact with tunable configuration values.</p>
+              </div>
+              <div class="columns small-12 medium-3 end">
+                <p>Use Habitat Studio to test your plan and application, and build and iterate quickly.</p>
+              </div>
+            </div>
+            <div class="row carousel-cta">
+              <div class="columns small-12 text-align-center">
+                <a href="/demo/packaging-system/steps/1/" class="button cta">Get Started with Studio</a>
+              </div>
+            </div>
+          </div>
+          <div class="columns small-12 carousel-slide">
+            <div class="row carousel-slide-title">
+              <div class="columns small-12 h3 text-align-center">Build your application</div>
+            </div>
+            <div class="row carousel-bullets">
+              <div class="columns small-12 medium-5 medium-offset-1">
+                <p>Use Habitat Builder and the On-Prem Habitat Builder depot to automate your application builds and have complete
+                  control over your build and runtime dependencies and transitive dependencies.</p>
+              </div>
+              <div class="columns small-12 medium-5 end">
+                <p>Optionally, export your package into a variety of formats with Builder: Docker Image, ACI, Tarball, CloudFoundry,
+                  and more.</p>
+              </div>
+            </div>
+            <div class="row carousel-cta">
+              <div class="columns small-12 text-align-center">
+                <a href="/demo/build-system/steps/1/" class="button cta">Get Started with Builder</a>
+              </div>
+            </div>
+          </div>
+          <div class="columns small-12 carousel-slide">
+            <div class="row carousel-slide-title">
+              <div class="columns small-12 h3 text-align-center">Deploy your application</div>
+            </div>
+            <div class="row carousel-bullets">
+              <div class="columns small-12 medium-3 medium-offset-1">
+                <p>Deploy your application updates to your running services by defining your service groups' update strategies
+                  and subscribing to Builder channels.</p>
+              </div>
+              <div class="columns small-12 medium-4">
+                <p>Get automatic rebuilds when a new version of your application's underlying dependencies is available.</p>
+              </div>
+              <div class="columns small-12 medium-3 end">
+                <p>Export your application to a variety of container formats and publish them automatically to Docker Hub, ECR,
+                  and Kubernetes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="columns small-12 carousel-slide">
+            <div class="row carousel-slide-title">
+              <div class="columns small-12 h3 text-align-center">Run your application</div>
+            </div>
+            <div class="row carousel-bullets">
+              <div class="columns small-12 medium-3 medium-offset-1">
+                <p>Habitat's runtime automation runs your application's lifecycle hooks so your services behave intelligently
+                  over the course of their lifetime.</p>
+              </div>
+              <div class="columns small-12 medium-4">
+                <p>Templatize your configuration settings and update them as needed during runtime.</p>
+              </div>
+              <div class="columns small-12 medium-3 end">
+                <p>Your application will know how to behave as a member of a distributed system, wherever you choose to export
+                  and run it.</p>
+              </div>
+            </div>
+          </div>
+          <div class="columns small-12 carousel-slide">
+            <div class="row carousel-slide-title">
+              <div class="columns small-12 h3 text-align-center">Manage your application</div>
+            </div>
+            <div class="row carousel-bullets">
+              <div class="columns small-12 medium-3 medium-offset-1">
+                <p>Check the status of your services via a customizable health check API endpoint.</p>
+              </div>
+              <div class="columns small-12 medium-4">
+                <p>See exactly what software versions you are running in each environment. Have complete dependency and transitive
+                  dependency control and visibility.</p>
+              </div>
+              <div class="columns small-12 medium-3 end">
+                <p>Health and event data is gathered from your services and placed on a queue you can use to feed your monitoring
+                  systems.</p>
+              </div>
+            </div>
+            <div class="row carousel-cta">
+              <div class="columns small-12 text-align-center">
+                <a href="/demo/process-supervisor/steps/1/" class="button cta">Get Started with Supervisor</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="row home--carousel-nav carousel-nav-dots">
+          <li class="columns carousel-nav write-plan is-active" data-idx="0">1</li>
+          <li class="columns carousel-nav build" data-idx="1">2</li>
+          <li class="columns carousel-nav deploy" data-idx="2">3</li>
+          <li class="columns carousel-nav run" data-idx="3">4</li>
+          <li class="columns carousel-nav manage" data-idx="4">5</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      {{ partial "footer"}}
+    </footer>
+  </div>
+  <script>
+    window.ga = function () {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXXXXX-X', 'auto');
+    ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
 </html>

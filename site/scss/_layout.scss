@@ -1,0 +1,36 @@
+@import "variables";
+
+/* =============================
+Standard
+============================= */
+%grid-standard {
+  display: grid;
+  grid-gap: $grid-gap;
+}
+
+.layout-standard {
+  @extend %grid-standard;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  max-width: $layout-max-width;
+  margin: 0px auto;
+
+  > nav, > main, > footer {
+    grid-column: 1 / -1;
+  }
+}
+.layout-halves {
+  @extend %grid-standard;
+  grid-template-columns: 1fr 1fr;
+}
+.layout-thirds {
+  @extend %grid-standard;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.layout-small-full {
+  @include breakpoint(zero, small) {
+    grid-template-columns: 1fr;
+  }
+}
+.layout-row {
+  @extend %grid-standard;
+}
