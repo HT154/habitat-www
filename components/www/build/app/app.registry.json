@@ -5,6 +5,15 @@
   "core": "app.core.js",
   "corePolyfilled": "es5-build-disabled.js",
   "components": {
+    "hab-accordion": {
+      "$": "hab-accordion"
+    },
+    "hab-dropdown": {
+      "$": "hab-dropdown"
+    },
+    "hab-dumb": {
+      "$": "hab-dumb"
+    },
     "hab-test": {
       "$": "hab-test"
     }

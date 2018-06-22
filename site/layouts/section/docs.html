@@ -3,9 +3,15 @@
 {{ end }}
 
 {{ define "aside" }}
-  <ul>
+  <hab-accordion>
     <li><a href="/docs/">Docs Home</a></li>
-    <li><a href="/docs/install-habitat/">Install Habitat</a></li>
+    <li>
+      <a href="/docs/install-habitat/">Install Habitat</a>
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+      </ul>
+    </li>
     <li><a href="/docs/developing-packages/">Developing Packages</a></li>
     <li><a href="/docs/using-builder/">Working with Builder</a></li>
     <li><a href="/docs/using-habitat/">Managing Services</a></li>
@@ -15,7 +21,7 @@
     <li><a href="/docs/glossary/">Glossary</a></li>
     <li><a href="/docs/internals/">Internals</a></li>
     <li><a href="/docs/contribute/">Contribute</a></li>
-  </ul>
+  </hab-accordion>
   <button>Download the Habitat CLI</button>
 {{ end }}
 

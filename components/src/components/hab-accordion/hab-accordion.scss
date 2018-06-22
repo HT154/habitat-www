@@ -1,0 +1,61 @@
+hab-accordion {
+  @extend ul;
+
+  h2 {
+     cursor: pointer;
+     position: relative;
+     padding: 0 0.35em;
+     font-size: 1.35em;
+     font-family: Verdana;
+
+
+     // Define the style rules for the 'arrow icons'
+     span {
+        position: absolute;
+        right: 1em;
+        top: 0.75em;
+        font-size: 0.5em;
+     }
+  }
+
+
+  // Here we define the actual 'menu' and its 'options'
+  ul {
+     list-style: none;
+     padding: 0;
+
+     li {
+        background: rgba(230, 230, 230, 1);
+        border-bottom: 1px solid rgba(200, 200, 200, 1);
+        padding : 0.5em 1em;
+
+        h3 {
+           // -webkit rules for Safari
+           -webkit-margin-before: 0.3em;
+           -webkit-margin-after: 0.3em;
+           line-height: 1.2em;
+           font-family: Verdana;
+           font-size: 1rem;
+        }
+
+        p {
+           line-height: 1.2em;
+           margin: 0 0 1em 0;
+           font-family: Verdana;
+           font-size: 1rem;
+        }
+     }
+  }
+
+
+  // Following classes display/hide the 'menu'
+  // based on the state change detection in the
+  // component class
+  .active {
+     display: block;
+  }
+
+  .inactive {
+     display: none;
+  }
+}

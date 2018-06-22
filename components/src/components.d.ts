@@ -15,6 +15,67 @@ declare global {
 
 
 import {
+  habAccordion as HabAccordion
+} from './components/hab-accordion/hab-accordion';
+
+declare global {
+  interface HTMLHabAccordionElement extends HabAccordion, HTMLStencilElement {
+  }
+  var HTMLHabAccordionElement: {
+    prototype: HTMLHabAccordionElement;
+    new (): HTMLHabAccordionElement;
+  };
+  interface HTMLElementTagNameMap {
+    "hab-accordion": HTMLHabAccordionElement;
+  }
+  interface ElementTagNameMap {
+    "hab-accordion": HTMLHabAccordionElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "hab-accordion": JSXElements.HabAccordionAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface HabAccordionAttributes extends HTMLAttributes {
+      name?: string;
+    }
+  }
+}
+
+
+import {
+  habDropdown as HabDropdown
+} from './components/hab-dropdown/hab-dropdown';
+
+declare global {
+  interface HTMLHabDropdownElement extends HabDropdown, HTMLStencilElement {
+  }
+  var HTMLHabDropdownElement: {
+    prototype: HTMLHabDropdownElement;
+    new (): HTMLHabDropdownElement;
+  };
+  interface HTMLElementTagNameMap {
+    "hab-dropdown": HTMLHabDropdownElement;
+  }
+  interface ElementTagNameMap {
+    "hab-dropdown": HTMLHabDropdownElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "hab-dropdown": JSXElements.HabDropdownAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface HabDropdownAttributes extends HTMLAttributes {
+      item?: any;
+      name?: string;
+    }
+  }
+}
+
+
+import {
   AppProfile as HabTest
 } from './components/hab-test/hab-test';
 

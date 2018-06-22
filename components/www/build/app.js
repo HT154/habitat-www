@@ -63,4 +63,4 @@ function supportsCssVariables(win) {
 
 init(win, doc, doc.scripts, appNamespace, urlNamespace, publicPath, discoverPublicPath, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components);
 
-})(window, document, "App","app","/build/app/",true,"app.core.js","es5-build-disabled.js","hydrated",[["hab-test","hab-test",1]]);
+})(window, document, "App","app","/build/app/",true,"app.core.js","es5-build-disabled.js","hydrated",[["hab-accordion","hab-accordion",1,[["element",7],["name",1,1,2],["toggle",5]]],["hab-dropdown","hab-dropdown",1,[["element",7],["item",1,1,1],["name",1,1,2],["toggle",5]]],["hab-dumb","hab-dumb"],["hab-test","hab-test",1]]);

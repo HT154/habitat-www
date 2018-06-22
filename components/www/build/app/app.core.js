@@ -278,8 +278,16 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
       }
     };
     false;
+    true;
     false;
-    false, false;
+    domApi.$dispatchEvent = ((elm, eventName, data) => elm && elm.dispatchEvent(new win.CustomEvent(eventName, data)));
+    true;
+    // test if this browser supports event options or not
+    try {
+      win.addEventListener('e', null, Object.defineProperty({}, 'passive', {
+        get: () => domApi.$supportsEventOptions = true
+      }));
+    } catch (e) {}
     domApi.$parentElement = ((elm, parentNode) => {
       // if the parent node is a document fragment (shadow root)
       // then use the "host" property on it
@@ -356,6 +364,23 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
     // so no need to change to a different type
         return propValue;
   }
+  function initEventEmitters(plt, cmpEvents, instance) {
+    if (cmpEvents) {
+      const elm = plt.hostElementMap.get(instance);
+      cmpEvents.forEach(eventMeta => {
+        instance[eventMeta.method] = {
+          emit: data => {
+            plt.emitEvent(elm, eventMeta.name, {
+              bubbles: eventMeta.bubbles,
+              composed: eventMeta.composed,
+              cancelable: eventMeta.cancelable,
+              detail: data
+            });
+          }
+        };
+      });
+    }
+  }
   function proxyComponentInstance(plt, cmpConstructor, elm, instance, properties, memberName) {
     // at this point we've got a specific node of a host element, and created a component class instance
     // and we've already created getters/setters on both the host element and component class prototypes
@@ -392,7 +417,10 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
       // let's upgrade the data on the host element
       // and let the getters/setters do their jobs
             proxyComponentInstance(plt, componentConstructor, elm, instance);
-      false;
+      true;
+      // add each of the event emitters which wire up instance methods
+      // to fire off dom events from the host element
+      initEventEmitters(plt, componentConstructor.events, instance);
       false;
     } catch (e) {
       // something done went wrong trying to create a component instance
@@ -602,7 +630,15 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
         // create the instance from the user's component class
         // https://www.youtube.com/watch?v=olLxrojmvMg
                 instance = initComponentInstance(plt, elm);
-        false;
+        true;
+        // fire off the user's componentWillLoad method (if one was provided)
+        // componentWillLoad only runs ONCE, after instance's element has been
+        // assigned as the host element, but BEFORE render() has been called
+        try {
+          instance.componentWillLoad && (userPromise = instance.componentWillLoad());
+        } catch (e) {
+          plt.onError(e, 3 /* WillLoadError */ , elm);
+        }
       } else {
         false;
       }
@@ -683,8 +719,12 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
       // add getter/setter to the component instance
       // these will be pointed to the internal data set from the above checks
             definePropertyGetterSetter(instance, memberName, getComponentProp, setComponentProp);
+    } else if (true, property.elementRef) {
+      // @Element()
+      // add a getter to the element reference using
+      // the member name the component meta provided
+      definePropertyValue(instance, memberName, elm);
     } else {
-      false;
       false;
       false;
       false;
@@ -1223,6 +1263,24 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
       }
     };
   }
+  function attributeChangedCallback(membersMeta, elm, attribName, oldVal, newVal, propName) {
+    // only react if the attribute values actually changed
+    if (oldVal !== newVal && membersMeta) {
+      // normalize the attribute name w/ lower case
+      attribName = toLowerCase(attribName);
+      // using the known component meta data
+      // look up to see if we have a property wired up to this attribute name
+            for (propName in membersMeta) {
+        if (membersMeta[propName].attribName === attribName) {
+          // cool we've got a prop using this attribute name the value will
+          // be a string, so let's convert it to the correct type the app wants
+          // below code is ugly yes, but great minification ;)
+          elm[propName] = parsePropertyValue(membersMeta[propName].propType, newVal);
+          break;
+        }
+      }
+    }
+  }
   function connectedCallback(plt, cmpMeta, elm) {
     false;
     plt.isDisconnectedMap.delete(elm);
@@ -1335,7 +1393,12 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
       // coolsville, our host element has just hit the DOM
       connectedCallback(plt, cmpMeta, this);
     };
-    false;
+    true;
+    HostElementConstructor.attributeChangedCallback = function(attribName, oldVal, newVal) {
+      // the browser has just informed us that an attribute
+      // on the host element has changed
+      attributeChangedCallback(cmpMeta.membersMeta, this, attribName, oldVal, newVal);
+    };
     HostElementConstructor.disconnectedCallback = function() {
       // the element has left the builing
       disconnectedCallback(plt, this);
@@ -1415,7 +1478,8 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
     Context.document = doc;
     Context.publicPath = publicPath;
     false;
-    false;
+    true;
+    Context.emit = ((elm, eventName, data) => domApi.$dispatchEvent(elm, Context.eventNameFn ? Context.eventNameFn(eventName) : eventName, data));
     // add the h() fn to the app's global namespace
     App.h = h;
     App.Context = Context;
@@ -1489,9 +1553,28 @@ var s=document.querySelector("script[data-namespace='app']");if(s){publicPath=s.
         globalDefined[cmpMeta.tagNameMeta] = true;
         // initialize the members on the host element prototype
                 initHostElement(plt, cmpMeta, HostElementConstructor.prototype, hydratedCssClass);
-        false;
+        true;
+        {
+          // add which attributes should be observed
+          const observedAttributes = [];
+          // at this point the membersMeta only includes attributes which should
+          // be observed, it does not include all props yet, so it's safe to
+          // loop through all of the props (attrs) and observed them
+                    for (const propName in cmpMeta.membersMeta) {
+            // initialize the actual attribute name used vs. the prop name
+            // for example, "myProp" would be "my-prop" as an attribute
+            // and these can be configured to be all lower case or dash case (default)
+            cmpMeta.membersMeta[propName].attribName && observedAttributes.push(
+            // dynamically generate the attribute name from the prop name
+            // also add it to our array of attributes we need to observe
+            cmpMeta.membersMeta[propName].attribName);
+          }
+          // set the array of all the attributes to keep an eye on
+          // https://www.youtube.com/watch?v=RBs21CFBALI
+                    HostElementConstructor.observedAttributes = observedAttributes;
+        }
         // define the custom element
-        win.customElements.define(cmpMeta.tagNameMeta, HostElementConstructor);
+                win.customElements.define(cmpMeta.tagNameMeta, HostElementConstructor);
       }
     }
     function loadBundle(cmpMeta, modeName, cb) {
